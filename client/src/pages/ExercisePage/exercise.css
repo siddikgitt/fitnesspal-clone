@@ -1,6 +1,11 @@
-  section{
+  .section{
     border:1px solid grey;
     width: 70%;
-    height: 100vh;
+
     margin: auto;
+  }
+Th,Td{
+  border-right: 2px solid black;
+  text-align: start
+  
   }
