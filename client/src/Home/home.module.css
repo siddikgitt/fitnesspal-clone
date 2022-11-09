@@ -1,0 +1,89 @@
+.navdiv{
+    /* border: 1px solid red; */
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* position:fixed; */
+    box-shadow: 1px 0px 1px 0px;
+}
+.navlogo{
+    width: 40px;
+    font-size:30px;
+     color: blue;
+    margin-top: -.1px;
+    padding: 9px;
+    cursor: pointer;
+}
+
+
+
+/* footer css here ******************************************************** */
+.footerdiv{
+    /* border: 1px solid red; */
+    height:200px;
+    width: 100%;
+   
+    margin-top: 20px;
+   background-color: rgba(237, 234, 234, 0.999);
+    
+}
+.aboutdiv{
+    height: 40px;
+    width: 60%;
+    /* border: 1px solid red; */
+     margin: auto;
+     display: flex;
+     justify-content: space-evenly;
+     margin-bottom: 20px;
+}
+.about2div{
+    height: 40px;
+    width: 45%;
+    /* border: 1px solid red; */
+     margin: auto;
+     display: flex;
+     justify-content: space-evenly;
+     font-size: smaller;
+     color: blue;
+     cursor: pointer;
+     /* gap: 10px; */
+}
+
+.about3div{
+    height: 40px;
+    width:25%;
+    /* border: 1px solid red; */
+     margin: auto;
+     display: flex;
+     justify-content: space-evenly;
+     font-size: smaller;
+     color: blue;
+     cursor: pointer;
+}
+
+.about4div{
+    height: 40px;
+    width: 14%;
+    /* border: 1px solid red; */
+     margin: auto;
+}
+
+
+
+
+
+
+
+
+
+/* for image free h ye not use  */
+.imgnavdiv{
+    border: 1px solid blue;
+    height: 100%;
+    width: 100px;
+}
+.imgnav{
+    height: 100%;
+    width: 100%;
+}
