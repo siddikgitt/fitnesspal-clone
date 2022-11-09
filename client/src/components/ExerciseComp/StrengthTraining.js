@@ -22,20 +22,28 @@ function StrengthTraining() {
     <Table>
       <TableCaption textAlign='start' borderBottom='1px solid lightgrey' >
         <Flex    >
-       <Text   fontSize='13px'  color= '#0072BF'>Add Text</Text>
-       <Text fontSize='13px'  color= '#0072BF'>|</Text>
-       <Text fontSize='13px'  color= '#0072BF'>Quick Tools</Text>
+       <Text  fontWeight='bold'   fontSize='15px'  color= '#0072BF'> Add Text </Text>
+       <Text fontSize='13px'  color= '#0072BF' m="0 0.5rem"> | </Text>
+       <Text fontSize='15px' fontWeight='bold' color= '#0072BF'>Quick Tools</Text>
         </Flex>
       </TableCaption>
       <Thead>
         <Tr  borderBottom="1px solid #e6e6e6">
           <Th w="70%" fontSize='18px' fontWeight="bold" textTransform='capitalize'
-          color='#00548F' >Strength Training</Th>
-          <Th background="#00548F" color="#ffffff">Sets</Th>
-          <Th background="#00548F" color="#ffffff" isNumeric>
+          color='#00548F' 
+          borderRight='2px solid white'
+          >Strength Training</Th>
+          <Th background="#00548F" color="#ffffff" 
+          borderRight='2px solid white'
+          >Sets</Th>
+          <Th background="#00548F" color="#ffffff" 
+          borderRight='2px solid white'
+          isNumeric>
            Reps/Sets
           </Th>
-          <Th background="#00548F" color="#ffffff" isNumeric>
+          <Th background="#00548F" color="#ffffff"
+          borderRight='2px solid white'
+          isNumeric>
             Weight/Sets
           </Th>
           <Th></Th>
@@ -44,12 +52,12 @@ function StrengthTraining() {
       <Tbody>
         <Tr borderBottom="1px solid #e6e6e6"
          backgroundColor="#f6f6f6"
-       
-                      color="black">
-          <Td>push ups</Td>
-          <Td> 10</Td>
-          <Td isNumeric>25.4</Td>
-          <Td isNumeric>25.4</Td>
+      
+          color="black">
+          <Td borderRight='2px solid white'>push ups</Td>
+          <Td borderRight='2px solid white'> 10</Td>
+          <Td borderRight='2px solid white' isNumeric>25.4</Td>
+          <Td borderRight='2px solid white' isNumeric>25.4</Td>
 
           <Td>
           <Text fontWeight='extrabold' color="red" borderRadius="50%">
