@@ -1,9 +1,13 @@
 
 import './App.css';
+import ExerciseMain from './pages/ExercisePage/ExerciseMain';
+
 
 function App() {
   return (
-    <div>hiii i'm App</div>
+    <div>
+    <ExerciseMain/>
+    </div>
   );
 }
 
