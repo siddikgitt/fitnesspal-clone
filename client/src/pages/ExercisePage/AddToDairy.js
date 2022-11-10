@@ -66,7 +66,7 @@ function AddToDairy() {
             h="250px"
             m="1rem 0"
           >
-            <Box border="1px solid black" w="50%" borderRadius="0.1rem" overflow='scroll'>
+            <Box border="1px solid black" w="50%" borderRadius="0.1rem" overflowY='scroll'>
               {data.map(e=><Text p="5px" borderBottom="1px solid lightgrey" color="blue.500">
                 running fsadfkjfhn hfsjdh
               </Text>
