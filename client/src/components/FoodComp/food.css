@@ -1,0 +1,138 @@
+.fooddiaryDiv {
+    padding: 5rem 15rem;
+    /* border: 3px solid red; */
+}
+
+
+.foodDiaryBox div {
+    /* border-bottom: 1px solid rgb(220, 219, 219); */
+    text-align: left;
+}
+
+.foodDiaryBox div h2 {
+    color:rgb(32, 32, 151);
+}
+
+.foodDiaryBox div p {
+    padding-left: 0.5rem;
+    color: blue;
+}
+
+.breakfast {
+    width: 80%;
+    border: 1px solid brown;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.breakfast .chart { 
+    width: 45%;
+    padding: 5px;
+    display: flex;
+    
+}
+
+.breakfast .chart div {
+    background-color: rgb(32, 32, 151);
+    margin: auto;
+    text-align: center;
+    /* margin-left: 4px; */
+    padding: 3px;
+    width: 3rem;
+    
+}
+
+.breakfast .chart h5 {
+    color: white;
+    margin-top: -1px;
+}
+
+.breakfast .chart p {
+    margin-top: -1.5rem;
+    color: rgb(189, 186, 186);
+}
+
+
+
+
+.table {
+    margin: auto;
+    border: 1px solid red;
+    width: 40%;
+}
+
+.total {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: -10px;
+
+}
+.total div {
+    width: 13%;
+    margin: auto;
+    text-align: center;
+    padding: 2px;
+    background-color: rgb(233, 233, 233);
+}
+
+.goal {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.goal div {
+    width: 13%;
+    margin: auto;
+    text-align: center;
+    padding: 2px;
+    background-color: rgb(233, 233, 233);
+}
+
+.remaining {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    
+
+}
+
+.remaining div {
+    width: 13%;
+    margin: auto;
+    text-align: center;
+    padding: 2px;
+    background-color: rgb(233, 233, 233);
+}
+
+.category {
+    width: 75%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.category div {
+    width: 13%;
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(32, 32, 151);
+}
+
+.category div h5 {
+    color: white;
+    margin-top: -1px;
+}
+
+.category div p {
+    color: rgb(197, 195, 195);
+    margin-top: -1.5rem;
+}
