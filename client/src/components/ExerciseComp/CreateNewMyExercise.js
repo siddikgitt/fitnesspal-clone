@@ -13,7 +13,7 @@ import React from "react";
 
 function CreateNewMyExercise() {
   return (
-    <Flex flexDir={"column"} width={"57%"} m="3rem 2rem " >
+    <Flex flexDir={"column"} width={"57%"} m="3rem auto " >
       <Text
         textAlign={"start"}
         fontSize="1.3rem "

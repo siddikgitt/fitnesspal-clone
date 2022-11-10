@@ -19,7 +19,7 @@ function Database_calBurn() {
   return (
     <Flex
       w="60%"
-      border="1px solid red"
+      // border="1px solid red"
       m="auto"
       flexFlow="column"
       height="500px"
