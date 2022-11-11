@@ -33,7 +33,7 @@ function HeadDate() {
       <Flex
         justifyContent="center"
         fontSize={{ base: "14px", md: "16px", lg: "18px" }}
-        w="70%"
+        w="100%"
         gap="2px"
         alignItems={"center"}
       >
@@ -48,8 +48,8 @@ function HeadDate() {
           <AiFillCaretLeft fontWeight="extrabold" fontSize={"1.5rem"} />
         </Box>
         <Box
-          p={"2"}
-          w={"90%"}
+          p={"5"}
+          w={"100%"}
           textAlign="center"
           color={"#FFFFFF"}
           backgroundColor={"#00548f"}
