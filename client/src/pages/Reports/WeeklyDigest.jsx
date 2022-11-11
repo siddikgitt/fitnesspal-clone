@@ -1,12 +1,12 @@
 import { Box, Button,  Flex, Text } from '@chakra-ui/react'
 import React from 'react'
-import AllTimeStatsCard from '../../Components/Reports/Card/AllTimeStatsCard'
-import CalorieGraph from '../../Components/Reports/Card/CalorieGraph'
-import FoodLoggedCard from '../../Components/Reports/Card/FoodLoggedCard'
-import MacronutrientGraph from '../../Components/Reports/Card/MacronutrientGraph'
-import PremiumCard from '../../Components/Reports/Card/PremiumCard'
-import WeeklyCard from '../../Components/Reports/Card/WeeklyCard'
-import WeeklyLogStatus from '../../Components/Reports/Card/WeeklyLogStatus'
+import AllTimeStatsCard from '../../components/Reports/Card/AllTimeStatsCard'
+import CalorieGraph from '../../components/Reports/Card/CalorieGraph'
+import FoodLoggedCard from '../../components/Reports/Card/FoodLoggedCard'
+import MacronutrientGraph from '../../components/Reports/Card/MacronutrientGraph'
+import PremiumCard from '../../components/Reports/Card/PremiumCard'
+import WeeklyCard from '../../components/Reports/Card/WeeklyCard'
+import WeeklyLogStatus from '../../components/Reports/Card/WeeklyLogStatus'
 
 const WeeklyDigest = () => {
   return (
