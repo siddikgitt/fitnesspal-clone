@@ -11,12 +11,7 @@ import MyExercisePage from "./pages/ExercisePage/MyExercisePage";
 function App() {
   return (
     <div>
-      {/* <Database_calBurn /> */}
-
-      <MyExercisePage />
-      {/* <FoodDatabase /> */}
-      {/* <My_Food /> */}
-      <CreateNewMyExercise />
+     app
      
     </div>
   );
