@@ -8,10 +8,11 @@
     "mongoose": "^6.7.2",
     "passport-facebook": "^3.0.0"
   },
-  "devDependencies": {
+  "devDependencies": {    
     "nodemon": "^2.0.20"
   },
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
