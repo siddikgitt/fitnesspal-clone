@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const UserSchema = new mongoose.Schema({
     email: String,
     password: String,
-    age: Number
+    dob: Date
 });
 
 const UserModel = mongoose.model("userjwt", UserSchema)
