@@ -8,17 +8,20 @@ import Database_calBurn from "./pages/ExercisePage/Database_calBurn";
 import ExerciseMain from "./pages/ExercisePage/ExerciseMain";
 import MyExercisePage from "./pages/ExercisePage/MyExercisePage";
 
+
+
+
 function App() {
   return (
 
-    <div>
-     app
-     
+   
+   
 
     <div className='App'>
     <ExerciseMain/>
 
     </div>
+
   );
 }
 
