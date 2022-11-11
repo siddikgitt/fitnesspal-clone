@@ -4,7 +4,7 @@ import ExerciseMain from "./pages/ExercisePage/ExerciseMain";
 function App() {
   return (
     <div className='App'>
-    <ExerciseMaing/>
+    <ExerciseMain/>
     </div>
   );
 }
