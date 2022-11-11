@@ -1,12 +1,12 @@
 
 import './App.css';
-import ExerciseMain from './pages/ExercisePage/ExerciseMain';
+import AllRoutes from './Routes/AllRoutes';
 
 
 function App() {
   return (
     <div className='App'>
-    <ExerciseMain/>
+    <AllRoutes />
     </div>
   );
 }

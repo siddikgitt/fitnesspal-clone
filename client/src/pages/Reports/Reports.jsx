@@ -1,10 +1,10 @@
 import { Box, Button, Center, Flex,  HStack, Select, Stack, Text } from '@chakra-ui/react'
 import React from 'react'
 import { useState } from 'react';
-import WeightGraph from '../../Components/Reports/Card/WeightGraph';
-import { report_select } from '../../Components/Reports/selectList';
+import WeightGraph from '../../components/Reports/Card/WeightGraph';
+import { report_select } from '../../components/Reports/selectList';
 import {CSVLink} from "react-csv";
-import { headers } from '../../Components/Reports/headersForExport';
+import { headers } from '../../components/Reports/headersForExport';
 const Reports = () => {
   const [report,setReport]=useState('');
   const changeHandler=(e)=>{
