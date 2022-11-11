@@ -5,8 +5,7 @@ import ExerciseMain from './pages/ExercisePage/ExerciseMain';
 
 function App() {
   return (
-    <div>
- 
+    <div className='App'>
     <ExerciseMain/>
     </div>
   );
