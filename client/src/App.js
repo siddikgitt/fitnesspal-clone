@@ -10,9 +10,8 @@ import MyExercisePage from "./pages/ExercisePage/MyExercisePage";
 
 function App() {
   return (
-    <div>
-     app
-     
+    <div className='App'>
+    <ExerciseMain/>
     </div>
   );
 }
