@@ -11,8 +11,29 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 
+const data = JSON.parse(localStorage.getItem("PersonalExercise")) || [];
+let init = {
+  name: "",
+  type: "",
+  min: "",
+  calories: "",
+};
 function MyExercisePage() {
-  const data = new Array(10).fill(0);
+  const [matchel, setmatchel] = useState({});
+  const [edit, setEdit] = useState(matchel);
+  console.log(matchel);
+
+  function handleEdit(e) {
+    const { name, value } = e.target;
+    setEdit({
+      ...edit,
+      [name]: value,
+    });
+  }
+
+  function handleMatch(e) {
+    setmatchel(e);
+  }
 
   return (
     <Flex w="60%" justifyContent={"center"} m="5rem auto" flexFlow="column">
@@ -96,8 +117,9 @@ function MyExercisePage() {
                         p="5px"
                         borderBottom="1px solid lightgrey"
                         color="blue.500"
+                        onClick={() => handleMatch(e)}
                       >
-                        running fsadfkjfhn hfsjdh
+                        {e.name}
                       </Text>
                     ))}
                   </Box>
@@ -125,6 +147,9 @@ function MyExercisePage() {
               Name:
             </Text>
             <Input
+              placeholder={`(${matchel.name})`}
+              onChange={(e) => handleEdit(e)}
+              name="name"
               focusBorderColor="none"
               type="text"
               w="180px"
@@ -133,7 +158,7 @@ function MyExercisePage() {
               borderTop="1px solid black"
               borderLeft="1px solid black"
               background="white"
-              placeholder="0"
+             
             />
           </HStack>
 
@@ -143,7 +168,10 @@ function MyExercisePage() {
             </Text>
 
             <Stack spacing={3}>
-              <Select
+              <Select 
+             
+              onChange={(e) => handleEdit(e)}
+              name="type"
                 w="150px"
                 focusBorderColor="none"
                 bg="white"
@@ -153,8 +181,8 @@ function MyExercisePage() {
                 borderRadius={"none"}
                 fontSize="12px"
               >
-                <option value="option1">Killogram</option>
-                <option value="option2">pounds</option>
+                <option value="Cardiovascular">Cardiovascular</option>
+                <option value="strength">strength</option>
               </Select>
             </Stack>
           </HStack>
@@ -164,6 +192,8 @@ function MyExercisePage() {
               Your Weight:
             </Text>
             <Input
+   
+            
               focusBorderColor="none"
               type="text"
               w="60px"
@@ -184,6 +214,9 @@ function MyExercisePage() {
                 Minutes:
               </Text>
               <Input
+              placeholder={`(${matchel.min})`}
+              onChange={(e) => handleEdit(e)}
+              name="min"
                 focusBorderColor="none"
                 type="text"
                 w="60px"
@@ -192,7 +225,7 @@ function MyExercisePage() {
                 borderTop="1px solid black"
                 borderLeft="1px solid black"
                 background="white"
-                placeholder="0"
+               
               />
             </HStack>
             <HStack justifyContent={"center"}>
@@ -200,6 +233,9 @@ function MyExercisePage() {
                 Calories:
               </Text>
               <Input
+              placeholder={`(${matchel.calories})`}
+              onChange={(e) => handleEdit(e)}
+              name="calories"
                 focusBorderColor="none"
                 type="text"
                 w="60px"
@@ -208,7 +244,6 @@ function MyExercisePage() {
                 borderTop="1px solid black"
                 borderLeft="1px solid black"
                 background="white"
-                placeholder="0"
               />
             </HStack>
           </Flex>
@@ -225,6 +260,7 @@ function MyExercisePage() {
               Save
             </Button>
             <Button
+            onClick={()=>console.log(Date.now())}
               border="1px solid"
               className="reportBtn"
               fontSize={"13px"}
