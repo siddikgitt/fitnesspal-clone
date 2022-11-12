@@ -1,0 +1,559 @@
+.navdiv{
+    /* border: 1px solid red; */
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* position:fixed; */
+    box-shadow: 1px 0px 1px 0px;
+}
+.navlogo{
+    width: 40px;
+    font-size:30px;
+     color: blue;
+    margin-top: -.1px;
+    padding: 9px;
+    cursor: pointer;
+  
+  
+}
+
+/* NAVBAR after login     csss    */
+.nav2div{
+    /* border: 1px solid red; */
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* position:fixed; */
+    box-shadow: 1px 0px 1px 0px;
+}
+.nav2logodiv{
+    width: 50%;
+    /* border: 1px solid red; */
+    
+}
+.nav2logo{
+    width: 40px;
+    font-size:30px;
+     color: blue;
+    margin-top: -.1px;
+    padding: 9px;
+    cursor: pointer;
+    margin-left: 45%;
+  
+}
+.nav2info{
+    /* border: 1px solid blue; */
+    width: 50%;
+    /* margin-left: 90px; */
+    display: flex;
+}
+.nav2name{
+    color: blue;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 8px;
+}
+.nav2imgdiv{
+    display: flex;
+    width: 100px;
+    /* border: 1px solid green; */
+    margin-left: 10px;
+    gap: 5px;
+    margin-right: 10px;
+}
+.nav2img{
+    width: 20%;
+    height: 30%;
+    margin-top: 20px;
+    margin-right: 2px;
+}
+.nav2color{
+    color: blue;
+    margin-right: 10px;
+    margin-left: 8px;
+    font-size: 14px;
+    margin-top: 18px;
+}
+.nav2follow{
+    margin-left: 10px;
+    font-size: 14px;
+    margin-top: 18px;
+}
+
+.myhome{
+    height: 45px;
+    width: 100%;
+    /* border: 1px solid red; */
+    background-color: rgb(36, 88, 184);
+}
+.homediv{
+    width: 50%;
+    margin: auto;
+    /* border: 1px solid red; */
+    height:98%;
+    display: flex;
+    
+}
+.homebutton{
+    background-color: rgb(36, 88, 184);
+    border: none;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    width: 130px;
+ 
+}
+.homebutton:hover{
+        background-color: rgb(32, 76, 115);
+}
+
+/* AFTER HOVER START HERE */
+
+
+
+.hoverdiv{
+    height: 45px;
+    width: 100%;
+    /* border: 1px solid red; */
+    background-color: rgb(32, 76, 115);
+}
+.hover2div{
+    width: 50%;
+    margin: auto;
+    /* border: 1px solid red; */
+    height:98%;
+    display: flex;
+    margin-top: -2px;
+    
+}
+.hoverdivbutton{
+    background-color: rgb(32, 76, 115);
+    border: none;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+    width: 130PX;
+ 
+}
+
+
+
+/* good health div start here */
+
+.goodhealthdiv{
+    height: 450px;
+    width: 60%;
+    /* border: 1px solid red; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.gooddiv2{
+    height: 100%;
+    width: 45%;
+    /* border: 1px solid blue; */
+
+}
+
+.goodimgdiv{
+    /* border: 1px solid blue; */
+    height: 100%;
+    width: 50%;
+}
+.goodimg{
+    height: 100%;
+    width: 100%;
+}
+
+.goodh1{
+    font-size: 55px;
+    font-weight: bolder;
+   
+}
+.goodbutton{
+    width: 80%;
+    height: 60px;
+    font-size: larger;
+    color: white;
+  font-weight: bolder;
+    background-color: blue;
+   border:none;
+   border-radius: 7px;
+}
+
+
+
+
+/* LOG FROM START HERE */
+.logdiv{
+    height: 400px;
+    width: 60%;
+    /* border: 1px solid red; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+.logimgdiv{
+    height: 100%;
+    width: 50%;
+}
+.logimg{
+    height: 100%;
+    width: 100%;
+}
+
+.logdiv2{
+    height: 80%;
+    width: 47%;
+    /* border: 1px solid red; */
+    margin-top: 40px;
+}
+.logh1{
+    font-size: 50px;
+    font-weight: bolder;
+
+}
+.p1{
+    font-size: 17px;
+    margin-top: -10px;
+    text-align: center;
+}
+
+
+
+
+/*  THE TOOLS START HERE CSS */
+
+.toolsdiv{
+    height: 150px;
+    width: 50%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 100px;
+}
+.toolsh1{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-left: 15%;
+    margin-top: -10px;
+
+}
+.toolsp1{
+    margin-top: -20px;
+    margin-inline-start: 20%;
+    margin-inline-end: 12%;
+    text-align: center;
+}
+
+
+.toolsgriddiv{
+    height: 320px;
+    width: 50%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.toolsgrid1{
+    /* border: 1px solid blue; */
+}
+.toolsimgdiv{
+    height: 40%;
+    width: 70%;
+    margin: auto;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 1%;
+
+}
+.toolsimg{
+    height: 70%;
+    width: 70%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.toolsh4{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-left: 20px;
+}
+.toolsgridp1{
+    margin-inline-start: 20px;
+    margin-inline-end: 15px;
+    text-align: center;
+}
+
+
+
+/* VICTORY STORIES */
+
+.vicdiv{
+    height: 150px;
+    width: 40%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 100px;
+    
+}
+
+.vich1{
+    font-size: 40px;
+    margin-left: 20%;
+    font-weight: bolder;
+}
+.vicp1{
+   margin-left: 14%;
+    margin-inline-end: 10%;
+    text-align: center;
+}
+
+.photo{
+    height: 450px;
+    width: 50%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    /* gap: 10px; */
+}
+
+.sidebar{
+    height: 100%;
+    width: 6%;
+    /* border: 2px solid blue; */
+    padding: 20px;
+}
+.vicimgdiv{
+    margin: 16px;
+    height: 80%;
+    width: 140%;
+    margin-top: 40px;
+    /* border: 1px solid blue; */
+}
+.vicimg{
+    height: 100%;
+    width: 100%;
+    /* padding: 2%; */
+}
+
+
+.vicimgside{
+    height: 100%;
+    width: 100%;
+}
+.vicbutton{
+    color: white;
+    background-color: rgb(63, 63, 220);
+    border: none;
+    border-radius: 5px;
+    height: 60px;
+    width: 25%;
+    font-size: 15px;
+    font-weight: bolder;
+    margin-left: 40%;
+    margin-top: 40px;
+}
+.viccarddiv{
+    /* border: 1px solid red; */
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* justify-content: space-evenly; */
+}
+
+.viccardh1{
+    margin-top: 30px;
+    font-size: 30px;
+    /* margin-left: -6px; */
+}
+.viccardp1{
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RECIPES & INSPIRATION */
+
+.recipediv{
+    height: 150px;
+    width: 40%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 100px;
+}
+
+.recipeh1{
+    font-size: 50px;
+    font-weight: bolder;
+    margin-left: 30px;
+}
+.recipep1{
+    /* font-size:large; */
+    margin-top: -20px;
+    margin-left: 20px;
+    /* margin-inline-end: 20px; */
+    width: 90%;
+    text-align: center;
+}
+
+
+
+.blogdiv{
+    height: 290px;
+    width: 70%;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: auto;
+    margin-top: 40px;
+    
+}
+
+.blogdiv2{
+    height: 100%;
+    /* border: 1px solid blue; */
+    width: 90%;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.blogimgdiv{
+    height: 60%;
+    width: 100%;
+    border-radius: 7px;
+}
+.blogimg{
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+}
+.blogimgh4{
+    margin-inline-start: 10px;
+    font-weight: bolder;
+    font-size: 17px;
+}
+.blogimgh42{
+    margin-inline-start: 10px;
+    color: blue;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+
+/* CONNECT WITH OVER 50 APPS ****************************************************/
+.connectdiv{
+    height: 250px;
+    width: 30%;
+    /* border: 1px solid red; */
+    margin: auto;
+    margin-top: 80px;
+}
+.connecth1{
+        text-align: center;
+        font-size: 50px;
+        font-weight: bolder;
+}
+.connectp1{
+    text-align: center;
+    width: 110%;
+    margin-inline-start:-20px ;
+    font-size: 16px;
+}
+
+.connectimg{
+    height: 500px;
+    width:50%;
+    margin-left: 26%;
+
+}
+.connectimgp1{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-top: 60px;
+    font-size: 12px;
+    
+}
+
+
+
+
+
+
+
+/* footer css here ******************************************************** */
+.footerdiv{
+    /* border: 1px solid red; */
+    height:200px;
+    width: 100%;
+   
+    margin-top: 80px;
+   background-color: rgba(237, 234, 234, 0.999);
+    
+}
+.aboutdiv{
+    height: 40px;
+    width: 60%;
+    /* border: 1px solid red; */
+     margin: auto;
+     display: flex;
+     justify-content: space-evenly;
+     margin-bottom: 20px;
+}
+.about2div{
+    height: 40px;
+    width: 45%;
+    /* border: 1px solid red; */
+     margin: auto;
+     display: flex;
+     justify-content: space-evenly;
+     font-size: smaller;
+     color: blue;
+     cursor: pointer;
+     /* gap: 10px; */
+}
+
+.about3div{
+    height: 40px;
+    width:25%;
+    /* border: 1px solid red; */
+     margin: auto;
+     display: flex;
+     justify-content: space-evenly;
+     font-size: smaller;
+     color: blue;
+     cursor: pointer;
+}
+
+.about4div{
+    height: 40px;
+    width: 14%;
+    /* border: 1px solid red; */
+     margin: auto;
+}
+
+
+
+
+
+
+

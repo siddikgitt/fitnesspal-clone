@@ -7,6 +7,6 @@ const UserSchema = new mongoose.Schema({
     dob: Date
 });
 
-const UserModel = mongoose.model("userjwt", UserSchema)
+const UserModel = mongoose.model("fitnesspal", UserSchema)
 
 module.exports = UserModel;
