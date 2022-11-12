@@ -38,4 +38,4 @@ const UpdateFoodById=async (id,data)=>{
     }
 }
 
-module.exports={getAllFood, addFood, searchFoodByQuery, UpdateFoodById}
+module.exports={getAllFood, addFood, UpdateFoodById}
