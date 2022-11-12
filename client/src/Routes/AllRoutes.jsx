@@ -17,7 +17,6 @@ import Signup7 from "../components/signup/Signup7";
 import Signup8 from "../components/signup/Signup8";
 import HomePage from "../Home/Home";
 import Navbar2 from "../Home/afternavbar";
-import HomePage from "../Home/Home";
 import AddToDairy from "../pages/ExercisePage/AddToDairy";
 import Database_calBurn from "../pages/ExercisePage/Database_calBurn";
 import ExerciseMain from "../pages/ExercisePage/ExerciseMain";
@@ -26,11 +25,13 @@ import Exports from "../pages/Reports/Exports";
 import Reports from "../pages/Reports/Reports";
 import WeeklyDigest from "../pages/Reports/WeeklyDigest";
 import PrivateRoutes from "./PrivateRoutes";
+import BeforeNavbar from "../Home/BeforeNavbar";
 
 const AllRoutes = () => {
+  const login = true;
   return (
     <div>
-      <Navbar2/>
+      {login ? <BeforeNavbar/>: <Navbar2/>}
       <Routes>
       <Route path="/" element={<HomePage/>} />
         <Route path="/login" element={<Login />} />

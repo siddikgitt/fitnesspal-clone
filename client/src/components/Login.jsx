@@ -1,7 +1,7 @@
 import { Box, Button, Center, Flex, Input, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { GrFacebook } from "react-icons/gr";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { login } from "../api";
 
 const Login = () => {
@@ -45,9 +45,11 @@ const Login = () => {
                 </Text>
               </Box>
               <Box>
+                <Link to="/home">
                 <Button onClick={onLogin} marginBottom="2" colorScheme={"blue"} w={"100%"}>
                   LOG IN
                 </Button>
+                </Link>
                 <Text marginBottom="2" textAlign={"center"}>
                   or
                 </Text>

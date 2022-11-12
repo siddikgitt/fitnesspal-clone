@@ -22,10 +22,9 @@ export default function HomePage(){
            <div className={StyleHome.navdiv}>
 
                 <h4 className={StyleHome.navlogoss}>myfitnesspal</h4>
-                <h4 className={StyleHome.navlogo}>myfitnesspal</h4>
                 <Link to={"/login"}>
                 <h4 style={{cursor: "pointer"}} className={StyleHome.navlogin} >LOG IN</h4>
-                
+                </Link>
             </div> 
            
             
