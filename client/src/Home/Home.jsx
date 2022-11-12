@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 // import Navbar2 from "./afternavbar"
 import Footer from "./footer"
 // import Navbar2 from "./afternavbar"
@@ -19,7 +20,9 @@ export default function HomePage(){
            <div className={StyleHome.navdiv}>
 
                 <h4 className={StyleHome.navlogo}>myfitnesspal</h4>
+                <Link to={"/login"}>
                 <h4 style={{cursor: "pointer"}} className={StyleHome.navlogin} >LOG IN</h4>
+                </Link>
             </div> 
            
              
@@ -33,7 +36,9 @@ export default function HomePage(){
                     <h1 className={StyleHome.goodh1}>Good health starts with what you eat.</h1>
                     <p className={StyleHome.goodp11}> Want to eat more mindfully? Track meals, learn about your habits, and reach your goals with MyFitnessPal.</p>
                     
+                    <Link to={"/signup1"}>
                     <button className={StyleHome.goodbutton}>START FOR FREE</button>
+                    </Link>
                 </div>
                 <div className={StyleHome.goodimgdiv}>
                     <img className={StyleHome.goodimg} src="https://www.myfitnesspal.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhero-slice%402x.e3eec8a8.png&w=1920&q=75" alt="Food img" />
@@ -140,9 +145,9 @@ export default function HomePage(){
                     </div>
                 </div>
 
-                
+                <Link to={"/signup1"}>
                  <button className={StyleHome.vicbutton}>START YOUR JOURNEY TODAY</button>
-
+                 </Link>
 
 
             {/* RECIPE & INSPIRATION ****************************** */}

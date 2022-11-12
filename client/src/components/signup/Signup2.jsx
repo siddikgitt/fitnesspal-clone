@@ -1,7 +1,29 @@
-import { Box, Button, Center, Flex, Input, Text, VStack } from "@chakra-ui/react";
-import React from "react";
+import {
+  Box,
+  Button,
+  Center,
+  Flex,
+  Input,
+  Text,
+  VStack,
+} from "@chakra-ui/react";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthContext";
+
+
 
 const Signup2 = () => {
+  const {signup,signupHandler,setSignup}=useContext(AuthContext);
+  const [value, setValue] = useState("");
+  const weightHandler=(e)=>{
+    setValue(e.target.innerText)
+  }
+  const submitHandler=()=>{
+    signupHandler({key:"currweight",data:value})
+    
+  }
+
   return (
     <div>
       <Center height={"100vh"}>
@@ -24,12 +46,48 @@ const Signup2 = () => {
               </Text>
 
               <VStack spacing={4}>
-                <Text _hover={{border: "1.5px solid black"}} borderRadius={7} border={"1.2px solid gray"} w="100%" textAlign={"center"} padding={"15px 0px"}>Lose Weight</Text>
-                <Text _hover={{border: "1.5px solid black"}} borderRadius={7} border={"1.2px solid gray"} w="100%" textAlign={"center"} padding={"15px 0px"}>Maintain Weight</Text>
-                <Text _hover={{border: "1.5px solid black"}} borderRadius={7} border={"1.2px solid gray"} w="100%" textAlign={"center"} padding={"15px 0px"}>Gain Weight</Text>
+                <Text
+                  _hover={{ border: "1.5px solid black" }}
+                  borderRadius={7}
+                  border={"1.2px solid gray"}
+                  w="100%"
+                  textAlign={"center"}
+                  padding={"15px 0px"}
+             
+                  onClick={(e)=>setSignup({...signup,goal:e.target.innerText})}
+                >
+                  Lose Weight
+                </Text>
+                <Text
+                  _hover={{ border: "1.5px solid black" }}
+                  borderRadius={7}
+                  border={"1.2px solid gray"}
+                  w="100%"
+                  textAlign={"center"}
+                  padding={"15px 0px"}
+                  onClick={(e)=>setSignup({...signup,goal:e.target.innerText})}
+
+                >
+                  Maintain Weight
+                </Text>
+                <Text
+                  _hover={{ border: "1.5px solid black" }}
+                  borderRadius={7}
+                  border={"1.2px solid gray"}
+                  w="100%"
+                  textAlign={"center"}
+                  padding={"15px 0px"}
+                  onClick={(e)=>setSignup({...signup,goal:e.target.innerText})}
+
+                >
+                  Gain Weight
+                </Text>
               </VStack>
 
               <Flex marginTop={7} gap={5}>
+              <Box w={"50%"}>
+
+              <Link to={"/signup1"}>
                 <Button
                   colorScheme="teal"
                   variant="outline"
@@ -38,9 +96,16 @@ const Signup2 = () => {
                 >
                   BACK
                 </Button>
-                <Button marginBottom="2" colorScheme={"blue"} w={"100%"}>
+                </Link>
+                </Box>
+              <Box w={"50%"}>
+
+                <Link to="/signup3">
+                <Button marginBottom="2" colorScheme={"blue"} w={"100%"} onClick={submitHandler}>
                   NEXT
                 </Button>
+                </Link>
+                </Box>
               </Flex>
             </Box>
           </Center>

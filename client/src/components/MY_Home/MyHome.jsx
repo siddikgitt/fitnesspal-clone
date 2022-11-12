@@ -1,7 +1,7 @@
 import { Box, Button, Center, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 
-const Home = () => {
+const MyHome = () => {
   return (
     <>
       <Center mt={"10%"}>
@@ -91,4 +91,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default MyHome;

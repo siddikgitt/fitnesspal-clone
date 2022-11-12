@@ -5,7 +5,7 @@ import CreateNewMyExercise from "../components/ExerciseComp/CreateNewMyExercise"
 import StrengthTraining from "../components/ExerciseComp/StrengthTraining";
 import Login from "../components/Login";
 import CheckIn from "../components/MY_Home/CheckIn";
-import Home from "../components/MY_Home/Home";
+import MyHome from "../components/MY_Home/MyHome";
 import Profile from "../components/MY_Home/Profile";
 import Signup1 from "../components/signup/Signup1";
 import Signup2 from "../components/signup/Signup2";
@@ -15,6 +15,8 @@ import Signup5 from "../components/signup/Signup5";
 import Signup6 from "../components/signup/Signup6";
 import Signup7 from "../components/signup/Signup7";
 import Signup8 from "../components/signup/Signup8";
+import Navbar2 from "../Home/afternavbar";
+import HomePage from "../Home/Home";
 import AddToDairy from "../pages/ExercisePage/AddToDairy";
 import Database_calBurn from "../pages/ExercisePage/Database_calBurn";
 import ExerciseMain from "../pages/ExercisePage/ExerciseMain";
@@ -27,8 +29,10 @@ import PrivateRoutes from "./PrivateRoutes";
 const AllRoutes = () => {
   return (
     <div>
+      <Navbar2/>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/" element={<HomePage />} />
 
         <Route path="/signup1" element={<Signup1 />} />
         <Route path="/signup2" element={<Signup2 />} />
@@ -43,7 +47,7 @@ const AllRoutes = () => {
           path="/home"
           element={
             <PrivateRoutes>
-              <Home />
+              <MyHome />
             </PrivateRoutes>
           }
         />
