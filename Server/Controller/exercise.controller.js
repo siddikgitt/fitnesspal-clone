@@ -38,4 +38,4 @@ const UpdateExerciseById=async (id,data)=>{
     }
 }
 
-module.exports={getAllExercise, addExercise, searchExerciseByQuery, UpdateExerciseById}
+module.exports={getAllExercise, addExercise, UpdateExerciseById}

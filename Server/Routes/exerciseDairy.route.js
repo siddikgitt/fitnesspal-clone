@@ -1,4 +1,5 @@
 const express=require("express");
+const { getExerciseDairyByDate, addExerciseDairy, deleteExerciseDairy } = require("../Controller/exerciseDairy.controller");
 const app=express.Router();
 const server_error=(e)=>{
     return {
@@ -11,6 +12,7 @@ app.get("/",async (req,res)=>{
         let date=req.query.date;
         let response=await getExerciseDairyByDate(date);
         res.status(200).send(response);
+        
     } catch (e) {
        res.status(500).send(server_error(e)); 
     }
@@ -29,7 +31,8 @@ app.post("/",async (req,res)=>{
 app.delete("/:id",async (req,res)=>{
     try {
         let id=req.params.id;
-        let response=await deleteExerciseDairy(id);
+        let {date,type}=req.body;
+        let response=await deleteExerciseDairy(date,type,id);
         res.status(200).send(response);
     } catch (e) {
        res.status(500).send(server_error(e)); 
