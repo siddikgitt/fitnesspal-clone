@@ -1,5 +1,5 @@
 const express=require("express");
-const { getAllFood, searchFoodByQuery, UpdateFoodById, addFood } = require("../Controller/food.controller");
+const { getAllFood, UpdateFoodById, addFood } = require("../Controller/food.controller");
 const app=express.Router();
 const server_error=(e)=>{
     return {
