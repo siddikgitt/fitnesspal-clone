@@ -1,8 +1,23 @@
 import { Box, Button, Center, Flex, Input, Text } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import { GrFacebook } from "react-icons/gr";
+import { useNavigate } from "react-router-dom";
+import { login } from "../api";
 
 const Login = () => {
+  const navigate = useNavigate();
+  const [email, setemail] = useState("")
+  const [password, setpassword] = useState("")
+
+  const onLogin = async() => {
+    const data = {"email": email, "password": password}
+    const res = await login(data);
+    console.log(res.data.message);
+    localStorage.setItem("access_token", res.data.message.token)
+    localStorage.setItem("refresh_token", res.data.message.refreshToken)
+    navigate("/home");
+  }
+
   return (
     <div>
       <Center height={"100vh"}>
@@ -22,15 +37,15 @@ const Login = () => {
                 </Text>
               </Center>
               <Box>
-                <Input marginBottom="2" placeholder="Email Address" />
-                <Input placeholder="Password" />
+                <Input onChange={(e) => setemail(e.target.value)} marginBottom="2" placeholder="Email Address" />
+                <Input onChange={(e) => setpassword(e.target.value)} placeholder="Password" />
 
                 <Text style={{ cursor: "pointer" }} marginBottom="5" textAlign={"left"} color={"blue"}>
                   Forgot Password?
                 </Text>
               </Box>
               <Box>
-                <Button marginBottom="2" colorScheme={"blue"} w={"100%"}>
+                <Button onClick={onLogin} marginBottom="2" colorScheme={"blue"} w={"100%"}>
                   LOG IN
                 </Button>
                 <Text marginBottom="2" textAlign={"center"}>
