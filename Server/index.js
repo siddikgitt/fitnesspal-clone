@@ -4,7 +4,14 @@ var passport = require("passport");
 require("dotenv").config();
 const express = require("express");
 const app = express();
+const dbConnect=require("./Utils/dbConnect");
+const foodRouter=require("./Routes/food.route");
+const foodDairyRouter=require("./Routes/foodDairy.route");
+const exerciseRouter=require("./Routes/exercise.route")
+const exerciseDairyRouter=require("./Routes/exerciseDairy.route")
+dbConnect();
 app.use(express.json());
+app.use(express.urlencoded({extended: true}))
 
 passport.use(
   new FacebookStrategy(
@@ -36,7 +43,16 @@ app.get(
     res.redirect("/secrets");
   }
 );
+app.use("/food",foodRouter);
+app.use("/foodDairy",foodDairyRouter);
+app.use("/exercise",exerciseRouter);
+app.use("/exerciseDairy",exerciseDairyRouter);
+app.get('/', (req, res) => res.send('Myfitnesspal'))
 
 app.listen(3000, () => {
   console.log("server started");
 });
+
+
+
+
