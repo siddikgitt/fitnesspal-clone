@@ -18,7 +18,7 @@ export default function HomePage(){
         {/* Navbar  */}
            <div className={StyleHome.navdiv}>
 
-                <h4 className={StyleHome.navlogo}>myfitnesspal</h4>
+                <h4 className={StyleHome.navlogoss}>myfitnesspal</h4>
                 <h4 style={{cursor: "pointer"}} className={StyleHome.navlogin} >LOG IN</h4>
             </div> 
            

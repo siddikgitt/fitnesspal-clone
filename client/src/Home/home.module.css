@@ -7,15 +7,21 @@
     /* position:fixed; */
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
-.navlogo{
+.navlogoss{
     width: 40px;
     font-size:30px;
      color: blue;
-    margin-top: -.1px;
+    /* margin-top: -.1px; */
     padding: 9px;
     cursor: pointer;
+    display: flex;
   
   
+  
+}
+.navlogin{
+    margin-top: 20px;
+    /* border: 1px solid red; */
 }
 
 
@@ -120,6 +126,7 @@
 .goodh1{
     font-size: 55px;
     font-weight: bolder;
+    margin-bottom: 30px;
    
 }
 .goodbutton{
@@ -131,6 +138,7 @@
     background-color: blue;
    border:none;
    border-radius: 7px;
+   margin-top: 50px;
 }
 
 
@@ -413,7 +421,7 @@
 
 }
 .toolsp1{
-    margin-top: -20px;
+    /* margin-top: -20px; */
     margin-inline-start: 20%;
     margin-inline-end: 12%;
     text-align: center;
@@ -451,6 +459,7 @@
 }
 
 .toolsh4{
+    margin-top: 20px;
     font-size: 20px;
     font-weight: bolder;
     margin-left: 20px;
@@ -630,11 +639,13 @@
 }
 
 .vich1{
+    
     font-size: 40px;
     margin-left: 20%;
     font-weight: bolder;
 }
 .vicp1{
+    margin-top: 10px;
    margin-left: 14%;
     margin-inline-end: 10%;
     text-align: center;
@@ -653,7 +664,7 @@
 
 .sidebar{
     height: 100%;
-    width: 6%;
+    width: 10%;
     /* border: 2px solid blue; */
     padding: 20px;
 }
@@ -700,7 +711,7 @@
     /* margin-left: -6px; */
 }
 .viccardp1{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 
@@ -915,7 +926,7 @@
 }
 .recipep1{
     /* font-size:large; */
-    margin-top: -20px;
+    /* margin-top: -20px; */
     margin-left: 20px;
     /* margin-inline-end: 20px; */
     width: 90%;
@@ -954,6 +965,7 @@
     border-radius: 7px;
 }
 .blogimgh4{
+    margin-top: 20px;
     margin-inline-start: 10px;
     font-weight: bolder;
     font-size: 17px;
@@ -962,7 +974,7 @@
     margin-inline-start: 10px;
     color: blue;
     font-size: 14px;
-    margin-top: -10px;
+    margin-top: 20px;
 }
 
 @media all and (min-width:819px) and (max-width:1181px){
