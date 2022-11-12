@@ -8,11 +8,12 @@ const getExerciseDairyByDate=async (date)=>{
     }
 }
 const addExerciseDairy=async (data)=>{
-    let date=data.Date;
+    let {date,type,id}=data;
     let exerciseDairy=await ExerciseDairy.find({Date:date});
+
     if(exerciseDairy.length>0){
-        //  Require Correction
-     let exercise=await ExerciseDairy.updateOne({Date:date},{$set:data});
+        let exerciseArr=exerciseDairy[type].push(id);
+        let exercise=await ExerciseDairy.updateOne({Date:date},{$set:{[type]:exerciseArr}})
      return {
         message:exercise,
         error:false
@@ -29,9 +30,10 @@ const addExerciseDairy=async (data)=>{
         }
     }
 }
-const deleteExerciseDairy=async (id)=>{
-    // Require Correction
-    await ExerciseDairy.findByIdAndRemove(id);
+const deleteExerciseDairy=async (date,type,id)=>{
+    let exercise= await ExerciseDairy.find({Date:date});
+    let exerciseArr=exercise[type].filter((el)=>el!==id)
+    await ExerciseDairy.updateOne({Date:date},{$set:{[type]:exerciseArr}})
     return {
         message:"deleted",
         error:false
