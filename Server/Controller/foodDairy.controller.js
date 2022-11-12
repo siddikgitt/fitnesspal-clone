@@ -8,10 +8,11 @@ const getFoodDairyByDate=async (date)=>{
     }
 }
 const addFoodDairy=async (data)=>{
-    let date=data.Date;
+    let {date,type,id}=data;
     let foodDairy=await FoodDairy.find({Date:date});
     if(foodDairy.length>0){
-     let food=await FoodDairy.updateOne({Date:date},{$set:data});
+        let foodArr=foodDairy[type].push(id);
+        let food=await FoodDairy.updateOne({Date:date},{$set:{[type]:foodArr}})
      return {
         message:food,
         error:false

@@ -1,4 +1,5 @@
 const express=require("express");
+const { getAllExercise, addExercise, UpdateExerciseById } = require("../Controller/exercise.controller");
 const app=express.Router();
 const server_error=(e)=>{
     return {

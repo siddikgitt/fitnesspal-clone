@@ -1,5 +1,6 @@
 import { Box, Button, Center, Flex, Input, Text } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Signup1 = () => {
   return (
@@ -23,10 +24,11 @@ const Signup1 = () => {
                 </Text>
               
               <Box>
+                <Link to="/signup2">
                 <Button marginBottom="2" colorScheme={"blue"} w={"100%"}>
                   CONTINUE
                 </Button>
-                
+                </Link>
               </Box>
             </Box>
           </Center>
