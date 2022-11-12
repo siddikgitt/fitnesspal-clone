@@ -11,9 +11,9 @@ export default function Navbar2(auth){
            {auth ? <div className={StyleHome.nav2div}>
                     <div  className={StyleHome.nav2logodiv}><h4 className={StyleHome.nav2logo}>myfitnesspal</h4></div>
                <div className={StyleHome.nav2info}>
-                <p>Hi,</p> <p className={StyleHome.nav2name}>Deepak</p>
+                <p className={StyleHome.nav2ppp}>Hi,</p> <p className={StyleHome.nav2name}>Deepak</p>
 
-                <p>|</p>
+                <p className={StyleHome.nav2ppp}  >|</p>
 
                 <div className={StyleHome.nav2imgdiv}>
 
@@ -24,19 +24,19 @@ export default function Navbar2(auth){
                 </div>
 
 
-                <p>|</p>
+                <p  className={StyleHome.nav2ppp}>|</p>
 
                 <p className={StyleHome.nav2color}>Help</p>
 
-                <p>|</p>
+                <p  className={StyleHome.nav2ppp}>|</p>
 
                 <p className={StyleHome.nav2color}>Settings</p>
 
-                <p>|</p>
+                <p  className={StyleHome.nav2ppp}>|</p>
 
                 <p onClick={()=> auth=false} className={StyleHome.nav2logout}>Logout</p>
 
-                <p>|</p>
+                <p  className={StyleHome.nav2ppp}>|</p>
 
                 <p className={StyleHome.nav2follow}>Follow us:</p>
                 <div className={StyleHome.nav2imgdiv}>

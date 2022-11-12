@@ -1,7 +1,8 @@
 import { useState } from "react"
-// import Navbar2 from "./afternavbar"
+
+
 import Footer from "./footer"
-// import Navbar2 from "./afternavbar"
+
 import StyleHome from "./home.module.css"
 
 
@@ -22,7 +23,7 @@ export default function HomePage(){
                 <h4 style={{cursor: "pointer"}} className={StyleHome.navlogin} >LOG IN</h4>
             </div> 
            
-             
+            
          
 
 
