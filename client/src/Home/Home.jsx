@@ -1,8 +1,10 @@
 import { useState } from "react"
+
+
 import { Link } from "react-router-dom"
 // import Navbar2 from "./afternavbar"
 import Footer from "./footer"
-// import Navbar2 from "./afternavbar"
+
 import StyleHome from "./home.module.css"
 
 
@@ -19,13 +21,14 @@ export default function HomePage(){
         {/* Navbar  */}
            <div className={StyleHome.navdiv}>
 
+                <h4 className={StyleHome.navlogoss}>myfitnesspal</h4>
                 <h4 className={StyleHome.navlogo}>myfitnesspal</h4>
                 <Link to={"/login"}>
                 <h4 style={{cursor: "pointer"}} className={StyleHome.navlogin} >LOG IN</h4>
-                </Link>
+                
             </div> 
            
-             
+            
          
 
 

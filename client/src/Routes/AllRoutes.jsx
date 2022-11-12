@@ -15,6 +15,7 @@ import Signup5 from "../components/signup/Signup5";
 import Signup6 from "../components/signup/Signup6";
 import Signup7 from "../components/signup/Signup7";
 import Signup8 from "../components/signup/Signup8";
+import HomePage from "../Home/Home";
 import Navbar2 from "../Home/afternavbar";
 import HomePage from "../Home/Home";
 import AddToDairy from "../pages/ExercisePage/AddToDairy";
@@ -31,6 +32,7 @@ const AllRoutes = () => {
     <div>
       <Navbar2/>
       <Routes>
+      <Route path="/" element={<HomePage/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<HomePage />} />
 

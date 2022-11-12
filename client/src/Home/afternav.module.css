@@ -13,6 +13,12 @@
     /* border: 1px solid red; */
     
 }
+.nav2ppp{
+    /* color: blue; */
+    margin-top:17px;
+
+}
+
 .nav2logo{
     width: 40px;
     font-size:30px;
@@ -21,7 +27,7 @@
     padding: 9px;
     cursor: pointer;
     margin-left: 45%;
-  
+    display: flex;
 }
 .nav2info{
     /* border: 1px solid blue; */
@@ -34,6 +40,7 @@
     font-weight: bold;
     margin-right: 10px;
     margin-left: 8px;
+    margin-top: 17px;
 }
 .nav2imgdiv{
     display: flex;
