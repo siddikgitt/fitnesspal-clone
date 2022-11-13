@@ -99,7 +99,7 @@ const AllRoutes = () => {
           }
         />
         <Route
-          path="/exercise/diary"
+          path="/exercise"
           element={
             <PrivateRoutes>
               <ExerciseMain />
@@ -123,7 +123,7 @@ const AllRoutes = () => {
           }
         />
         <Route
-          path="/exercise/diary/add_to_diary"
+          path="/exercise/add_to_diary"
           element={
             <PrivateRoutes>
               <AddToDairy />
@@ -139,7 +139,7 @@ const AllRoutes = () => {
           }
         />
         <Route
-          path="/exercise/diary/add-cardio"
+          path="/exercise/add-cardio"
           element={
             <PrivateRoutes>
               <CardioVasular />
@@ -147,7 +147,7 @@ const AllRoutes = () => {
           }
         />
         <Route
-          path="/exercise/diary/add-strength"
+          path="/exercise/add-strength"
           element={
             <PrivateRoutes>
               <StrengthTraining />

@@ -23,6 +23,7 @@ function AddToDairy() {
 async function  handleSearch(){
 let data =await GetExerciseByName(q)
 console.log(data.data)
+setSearch(!search)
 }
 
 
@@ -56,6 +57,7 @@ console.log(data.data)
           onClick={handleSearch}
           colorScheme="green"
           className="reportBtn"
+          
         >
           Search
         </Button>
@@ -146,7 +148,7 @@ console.log(data.data)
               </Text>
 
               <Box>
-                <Link to="/exercise/diary/add_to_diary">
+                <Link to="/exercise">
                 <Button colorScheme="green" className="reportBtn" >
                   Add Exercise
                 </Button>

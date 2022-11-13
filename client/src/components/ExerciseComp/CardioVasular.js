@@ -49,7 +49,7 @@ function CardioVasular({currdate,setcurrdate}) {
         <Table variant="simple">
           <TableCaption textAlign="start" borderBottom="1px solid lightgrey" >
             <Flex gap="1" >
-            <Link to="/exercise/diary/add_to_diary">
+            <Link to="/exercise/add_to_diary">
               <Text fontSize="15px" 
               fontWeight='bold'
               color="#0072BF">

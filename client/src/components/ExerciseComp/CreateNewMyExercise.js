@@ -19,12 +19,24 @@ const exdata = {
   type: "",
   min: "",
   calories: "",
+  sets:"",
+  reps:"",
+  wtsets:""
+
 };
 let perEx = JSON.parse(localStorage.getItem("PersonalExercise")) || [];
 function CreateNewMyExercise() {
   const [flag, setflag] = useState(false);
   const [data, setdata] = useState(exdata);
   const [findata, setfin] = useState(perEx);
+  const [type,setType]=useState(data.type)
+
+  // change inputs according to type
+ useEffect(()=>{
+setType(data.type)
+
+ },[data.type])
+ console.log(type,"type")
 
  
 // use context
@@ -57,7 +69,7 @@ const {Exercisedata,setExercisedata}=useContext(ExerciseContext)
     console.log(response.data.message,"fdsfsdafsadf responmnse")
 
     setExercisedata(response.data.message[0])
-    navigate("/exercise/diary")
+    navigate("/exercise")
 
   }
   useEffect(() => {
@@ -140,9 +152,13 @@ const {Exercisedata,setExercisedata}=useContext(ExerciseContext)
             </Select>
           </Box>
           {/* Long */}
+
+          {type=="Cardiovascular"||type==""?
+          <>
           <Box mb={"0.5rem"}>
             <Text>How long?:</Text>
             <Input
+            required
               onChange={(e) => handleChange(e)}
               name="min"
               mr="0.5rem"
@@ -171,6 +187,60 @@ const {Exercisedata,setExercisedata}=useContext(ExerciseContext)
               background="white"
             />
           </Box>
+          </>:<>
+{/* for strength training */}
+          <Box mb={"0.5rem"}>
+            <Text>sets:</Text>
+            <Input
+              onChange={(e) => handleChange(e)}
+              name="sets"
+              mr="0.5rem"
+              focusBorderColor="none"
+              type="text"
+              w="60px"
+              h="23px"
+              borderRadius="none"
+              boxShadow="rgb(35, 49, 47) 1px 1px 1.5px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"
+              background="white"
+            />
+            
+          </Box>
+          {/* calories burned */}
+          <Box mb="1rem">
+            <Text>Repetitions/Set:</Text>
+            <Input
+              onChange={(e) => handleChange(e)}
+              name="reps"
+              focusBorderColor="none"
+              type="text"
+              w="60px"
+              h="23px"
+              borderRadius="none"
+              boxShadow="rgb(35, 49, 47) 1px 1px 1.5px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"
+              background="white"
+            />
+          </Box>
+          <Box mb={"0.5rem"}>
+            <Text>Weight/Set:</Text>
+            <Input
+              onChange={(e) => handleChange(e)}
+              name="wtsets"
+              mr="0.5rem"
+              focusBorderColor="none"
+              type="text"
+              w="60px"
+              h="23px"
+              borderRadius="none"
+              boxShadow="rgb(35, 49, 47) 1px 1px 1.5px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"
+              background="white"
+            />
+           
+          </Box>
+          
+          </>
+}
+
+
           <Box>
             <Button
               colorScheme="green"
