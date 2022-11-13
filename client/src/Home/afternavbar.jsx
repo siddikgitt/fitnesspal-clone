@@ -10,9 +10,9 @@ export default function Navbar2(auth){
     return(
         <>
            {auth ? <div className={StyleHome.nav2div}>
-                    <div  className={StyleHome.nav2logodiv}><h4 className={StyleHome.nav2logo}>myfitnesspal</h4></div>
+                    <div  className={StyleHome.nav2logodiv}><h4 className={StyleHome.nav2logo}>MyFitnessFriend</h4></div>
                <div className={StyleHome.nav2info}>
-                <p className={StyleHome.nav2ppp}>Hi,</p> <p className={StyleHome.nav2name}>Deepak</p>
+                <p className={StyleHome.nav2ppp}>Hi,</p> <p className={StyleHome.nav2name}>Username</p>
 
                 <p className={StyleHome.nav2ppp}  >|</p>
 
@@ -51,7 +51,7 @@ export default function Navbar2(auth){
 
        {auth ? <div className={StyleHome.myhome}>
                 <div className={StyleHome.homediv}>
-                      <button onClick={()=> setHover(0)} style={ hover==0 ?{backgroundColor:"rgb(32, 76, 115)"} :{color:"white"} } className={StyleHome.homebutton}>MY HOME</button>
+                      <button onClick={()=> setHover(0)} style={ hover==0 ?{backgroundColor:"rgb(32, 76, 115)", width: "250px"} :{color:"white", width: "250px"} } className={StyleHome.homebutton}>MY HOME</button>
                       <button onClick={()=> setHover(1)} style={ hover==1 ?{backgroundColor:"rgb(32, 76, 115)"} :{color:"white"} } className={StyleHome.homebutton}>FOOD</button>
                       <button onClick={()=> setHover(2)} style={ hover==2 ?{backgroundColor:"rgb(32, 76, 115)"} :{color:"white"} } className={StyleHome.homebutton}>EXERCISE</button>
                       <button onClick={()=> setHover(3)} style={ hover==3 ?{backgroundColor:"rgb(32, 76, 115)"} :{color:"white"} }  className={StyleHome.homebutton}>REPORTS</button>
@@ -92,7 +92,7 @@ export default function Navbar2(auth){
         {/* EXERCISE HOVER DIV */}
        { auth && hover===2 ? <div className={StyleHome.hoverdiv}>
                 <div className={StyleHome.hover2div}>
-                      <button className={StyleHome.hoverdivbutton}><Link to={"/exercise/diary"}>Exercise Diary</Link></button>
+                      <button className={StyleHome.hoverdivbutton}><Link to={"/exercise"}>Exercise Diary</Link></button>
                       <button className={StyleHome.hoverdivbutton}><Link to={"/exercise/database"}>Database</Link></button>
                       <button className={StyleHome.hoverdivbutton}><Link to={"/exercise/myexercise"}>My Exercise</Link></button>
                       <button className={StyleHome.hoverdivbutton}>Settings</button>
