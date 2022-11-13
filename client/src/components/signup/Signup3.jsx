@@ -48,46 +48,49 @@ const Signup3 = () => {
                 <Text
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
-                  border={"1.5px solid gray"}
+                  border={value == "Not very Active" ? "2px solid black" :"1.5px solid gray"}
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
                   onClick={(e)=>{
                     
-                    setSignup({...signup,daily_activity:e.target.innerText})}}
+                      setSignup({...signup,daily_activity:e.target.innerText});
+                      setValue(e.target.innerText)
+                    }
+                  }
                 >
                   Not very Active
                 </Text>
                 <Text
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
-                  border={"1.5px solid gray"}
+                  border={value == "Lightly Weight Active" ? "2px solid black" :"1.5px solid gray"}
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
-                  onClick={(e)=>setSignup({...signup,daily_activity:e.target.innerText})}
+                  onClick={(e)=>{setSignup({...signup,daily_activity:e.target.innerText}); setValue(e.target.innerText)}}
                 >
                   Lightly Weight Active
                 </Text>
                 <Text
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
-                  border={"1.5px solid gray"}
+                  border={value == "Active" ? "2px solid black" :"1.5px solid gray"}
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
-                  onClick={(e)=>setSignup({...signup,daily_activity:e.target.innerText})}
+                  onClick={(e)=>{setSignup({...signup,daily_activity:e.target.innerText}); setValue(e.target.innerText)}}
                 >
                   Active
                 </Text>
                 <Text
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
-                  border={"1.5px solid gray"}
+                  border={value == "Very Active" ? "2px solid black" :"1.5px solid gray"}
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
-                  onClick={(e)=>setSignup({...signup,daily_activity:e.target.innerText})}
+                  onClick={(e)=>{setSignup({...signup,daily_activity:e.target.innerText}); setValue(e.target.innerText)}}
                 >
                   Very Active
                 </Text>

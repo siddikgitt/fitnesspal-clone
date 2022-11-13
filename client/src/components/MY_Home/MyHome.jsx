@@ -1,5 +1,6 @@
 import { Box, Button, Center, Flex, Text } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const MyHome = () => {
   return (
@@ -49,8 +50,8 @@ const MyHome = () => {
                   </Box>
                   <Box>
                     <Flex gap={5}>
-                      <Button bgColor={"white"} border={"1px solid black"}>Add Exercise</Button>
-                      <Button bgColor={"white"} border={"1px solid black"}>Add Food</Button>
+                      <Button bgColor={"white"} border={"1px solid black"}><Link to="/exercise/diary">Add Exercise</Link></Button>
+                      <Button bgColor={"white"} border={"1px solid black"}><Link to="/food/dairy">Add Food</Link></Button>
                     </Flex>
                   </Box>
                 </Flex>

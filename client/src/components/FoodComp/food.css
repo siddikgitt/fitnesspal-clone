@@ -31,6 +31,7 @@
     width: 45%;
     padding: 5px;
     display: flex;
+    gap: 2
     
 }
 
@@ -39,7 +40,7 @@
     margin: auto;
     text-align: center;
     padding: 3px;
-    width: 3rem;
+    width: fit-content;
     
 }
 

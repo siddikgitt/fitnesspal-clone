@@ -26,16 +26,19 @@ import Reports from "../pages/Reports/Reports";
 import WeeklyDigest from "../pages/Reports/WeeklyDigest";
 import PrivateRoutes from "./PrivateRoutes";
 import BeforeNavbar from "../Home/BeforeNavbar";
+import Goals from "../components/MY_Home/Goals";
+import AddFood from "../components/FoodComp/AddFood";
+import FoodDairy from "../components/FoodComp/FoodDiary";
+import FoodDiary from "../components/FoodComp/FoodDiary";
 
 const AllRoutes = () => {
   const login = true;
   return (
     <div>
-      {login ? <BeforeNavbar/>: <Navbar2/>}
+      {!login ? <BeforeNavbar /> : <Navbar2 />}
       <Routes>
-      <Route path="/" element={<HomePage/>} />
-        <Route path="/login" element={<Login />} />
         <Route path="/" element={<HomePage />} />
+        <Route path="/login" element={<Login />} />
 
         <Route path="/signup1" element={<Signup1 />} />
         <Route path="/signup2" element={<Signup2 />} />
@@ -65,10 +68,37 @@ const AllRoutes = () => {
         />
 
         <Route
+          path="/home/goal"
+          element={
+            <PrivateRoutes>
+              <Goals />
+            </PrivateRoutes>
+          }
+        />
+
+        <Route
           path="/home/checkin"
           element={
             <PrivateRoutes>
               <CheckIn />
+            </PrivateRoutes>
+          }
+        />
+
+        <Route
+          path="/food/addfood"
+          element={
+            <PrivateRoutes>
+              <AddFood />
+            </PrivateRoutes>
+          }
+        />
+
+        <Route
+          path="/food/dairy"
+          element={
+            <PrivateRoutes>
+              <FoodDiary/>
             </PrivateRoutes>
           }
         />
@@ -99,7 +129,7 @@ const AllRoutes = () => {
           }
         />
         <Route
-          path="/exercise/diary"
+          path="/exercise"
           element={
             <PrivateRoutes>
               <ExerciseMain />
@@ -123,7 +153,7 @@ const AllRoutes = () => {
           }
         />
         <Route
-          path="/exercise/diary/add_to_diary"
+          path="/exercise/add_to_diary"
           element={
             <PrivateRoutes>
               <AddToDairy />
@@ -139,7 +169,7 @@ const AllRoutes = () => {
           }
         />
         <Route
-          path="/exercise/diary/add-cardio"
+          path="/exercise/add-cardio"
           element={
             <PrivateRoutes>
               <CardioVasular />
@@ -147,7 +177,7 @@ const AllRoutes = () => {
           }
         />
         <Route
-          path="/exercise/diary/add-strength"
+          path="/exercise/add-strength"
           element={
             <PrivateRoutes>
               <StrengthTraining />

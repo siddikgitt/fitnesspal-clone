@@ -16,6 +16,7 @@ import { AuthContext } from "../../Context/AuthContext";
 const Signup2 = () => {
   const {signup,signupHandler,setSignup}=useContext(AuthContext);
   const [value, setValue] = useState("");
+  
   const weightHandler=(e)=>{
     setValue(e.target.innerText)
   }
@@ -49,23 +50,23 @@ const Signup2 = () => {
                 <Text
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
-                  border={"1.2px solid gray"}
+                  border={value == "Lose Weight" ? "2px solid black" : "1.2px solid gray"}
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
-             
-                  onClick={(e)=>setSignup({...signup,goal:e.target.innerText})}
+
+                  onClick={(e)=>{setSignup({...signup,goal:e.target.innerText}); setValue(e.target.innerText)}}
                 >
                   Lose Weight
                 </Text>
                 <Text
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
-                  border={"1.2px solid gray"}
+                  border={value == "Maintain Weight" ? "2px solid black" : "1.2px solid gray"}
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
-                  onClick={(e)=>setSignup({...signup,goal:e.target.innerText})}
+                  onClick={(e)=>{setSignup({...signup,goal:e.target.innerText}); ; setValue(e.target.innerText)}}
 
                 >
                   Maintain Weight
@@ -73,11 +74,11 @@ const Signup2 = () => {
                 <Text
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
-                  border={"1.2px solid gray"}
+                  border={value == "Gain Weight" ? "2px solid black" : "1.2px solid gray"}
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
-                  onClick={(e)=>setSignup({...signup,goal:e.target.innerText})}
+                  onClick={(e)=>{setSignup({...signup,goal:e.target.innerText}); ; setValue(e.target.innerText)}}
 
                 >
                   Gain Weight

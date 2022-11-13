@@ -57,6 +57,29 @@ function after_refresh(config){
 export function signupUser(user){
 return instance.post("/signup",user);
 }
-export function login(user){
-return instance.post("/login",user);
+export async function login(user){
+// return instance.post("/login",user);
+    // localStorage.setItem("");
+    let data = await axios.post("http://localhost:8080/login", user);
+    console.log(data)
+}
+
+export const searchAllFood = async() => {
+    const list = await axios.get("http://localhost:8080/simplefood/searchall")
+    return list
+}
+
+export const searchByName = async(name) => {
+    const list = await axios.post("http://localhost:8080/simplefood/searchallbyname", { "name": name});
+    return list
+}
+
+export const addFoodByName = async(data) => {
+    const res = await axios.post("http://localhost:8080/simplefood/addfoodtouser", data)
+    return res.data
+}
+
+export const searchAllFoodDiary = async(data) => {
+    const res = await axios.post("http://localhost:8080/simplefood/searchfood_dairy", data);
+    return res;
 }

@@ -1,4 +1,5 @@
 import { Box, Button, Center, Flex, Input, Text } from "@chakra-ui/react";
+import axios from "axios";
 import React, { useState } from "react";
 import { GrFacebook } from "react-icons/gr";
 import { Link, useNavigate } from "react-router-dom";
@@ -11,11 +12,15 @@ const Login = () => {
 
   const onLogin = async() => {
     const data = {"email": email, "password": password}
-    const res = await login(data);
-    console.log(res.data.message);
-    localStorage.setItem("access_token", res.data.message.token)
-    localStorage.setItem("refresh_token", res.data.message.refreshToken)
-    navigate("/home");
+    const res = await axios.post("http://localhost:8080/login", data);
+    console.log(res.data);
+    if(res.data.message != "Invalid Credentials"){
+      localStorage.setItem("fitUserID",res.data.message.data.id)
+      navigate("/home");
+    }
+    else{
+      alert("Invalid Credentials");
+    }
   }
 
   return (
@@ -45,11 +50,9 @@ const Login = () => {
                 </Text>
               </Box>
               <Box>
-                <Link to="/home">
                 <Button onClick={onLogin} marginBottom="2" colorScheme={"blue"} w={"100%"}>
                   LOG IN
                 </Button>
-                </Link>
                 <Text marginBottom="2" textAlign={"center"}>
                   or
                 </Text>
@@ -66,7 +69,9 @@ const Login = () => {
           <Text color="#A0A0A0" my="10px" align="center" fontSize="sm">
             Not a member?{" "}
             <span style={{ color: "blue", cursor: "pointer" }}>
+              <Link to={"/signup1"}>
               Sign Up now
+              </Link>
             </span>
           </Text>
         </Box>
