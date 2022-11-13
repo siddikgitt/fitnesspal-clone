@@ -12,6 +12,13 @@ export default function HomePage() {
 
   return (
     <>
+      {/* Navbar  */}
+      <div className={StyleHome.navdiv}>
+        <h4 className={StyleHome.navlogoss}>myfitnesspal</h4>
+        <h4 style={{ cursor: "pointer" }} className={StyleHome.navlogin}>
+          LOG IN
+        </h4>
+      </div>
       {/* GOOD HEALTH DIV START HERE */}
 
       <div className={StyleHome.goodhealthdiv}>
@@ -24,7 +31,7 @@ export default function HomePage() {
             Want to eat more mindfully? Track meals, learn about your habits,
             and reach your goals with MyFitnessPal.
           </p>
-
+=
           <Link to={"/signup1"}>
             <button className={StyleHome.goodbutton}>START FOR FREE</button>
           </Link>

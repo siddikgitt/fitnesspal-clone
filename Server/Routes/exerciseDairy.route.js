@@ -31,8 +31,9 @@ app.post("/",async (req,res)=>{
 app.delete("/:id",async (req,res)=>{
     try {
         let id=req.params.id;
-        let {date,type}=req.body;
-        let response=await deleteExerciseDairy(date,type,id);
+        let date=req.query.date;
+        // console.log(id,date)
+        let response=await deleteExerciseDairy(date,id);
         res.status(200).send(response);
     } catch (e) {
        res.status(500).send(server_error(e)); 

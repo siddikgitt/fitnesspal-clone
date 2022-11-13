@@ -16,7 +16,8 @@ const addFood=async (data)=>{
         }
     }
     else{
-        await Food.create(data);
+        let res=await Food.create(data);
+        console.log(res)
         return {
             message:"success",
             error:false
