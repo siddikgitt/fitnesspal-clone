@@ -86,7 +86,7 @@
     background-color: rgb(36, 88, 184);
 }
 .homediv{
-    width: 50%;
+    width: 60%;
     margin: auto;
     /* border: 1px solid red; */
     height:98%;
@@ -100,6 +100,7 @@
     color: white;
     font-weight: bolder;
     cursor: pointer;
+    padding: 0px 14px;
     width: 130px;
  
 }
@@ -385,7 +386,6 @@
         cursor: pointer;
         /* width: 130px; */
         font-size:10px;
-     
     }
     
     /* AFTER HOVER START HERE */
