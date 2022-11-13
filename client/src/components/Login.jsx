@@ -12,7 +12,7 @@ const Login = () => {
 
   const onLogin = async() => {
     const data = {"email": email, "password": password}
-    const res = await axios.post("http://localhost:8080/login", data);
+    const res = await axios.post("https://fierce-hen-pajamas.cyclic.app/login", data);
     console.log(res.data);
     if(res.data.message != "Invalid Credentials"){
       localStorage.setItem("fitUserID",res.data.message.data.id)
