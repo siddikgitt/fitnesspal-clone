@@ -60,3 +60,21 @@ return instance.post("/signup",user);
 export function login(user){
 return instance.post("/login",user);
 }
+export function GetExercise(){
+return instance.get("/exercise");
+}
+export function GetExerciseByName(query){
+return instance.get(`/exercise/search?q=${query}`);
+}
+export function postExercise(data){
+    return instance.post("/exercise",data);
+}
+export function postExerciseDairy(data){
+    return instance.post("/exerciseDairy",data)
+}
+export function getExerciseDairy(date){
+    return instance.get(`/exerciseDairy?date=${date}`)
+}
+export function DeleteExercise(id,date){
+    return instance.delete(`/exerciseDairy/${id}?date=${date}`)
+}

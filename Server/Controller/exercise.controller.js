@@ -8,28 +8,23 @@ const getAllExercise=async ()=>{
     }
 }
 const addExercise=async (data)=>{
-    let isExercise=await Exercise.find();
-    if(isExercise.length>0){
+    //    console.log(data)
+       let exercise= await Exercise.create(data);
+    
         return {
-            message:"Already Exists.",
-            error:false
-        }
-    }
-    else{
-        await Exercise.create(data);
-        return {
-            message:"success",
+            message:exercise,
             error:false
     }
-    }
+   
 }
-// const searchExerciseByQuery=async (q)=>{
-//     let allExercise=await Exercise.find({FoodDesExecription:{$regex:q}});
-//     return {
-//         message:allExercise,
-//         error:false
-//     }      
-// }
+const searchExerciseByQuery=async (q)=>{
+    console.log(q)
+    let exercise=await Exercise.find({name:{$regex:q}});
+    return {
+        message:exercise,
+        error:false
+    }      
+}
 const UpdateExerciseById=async (id,data)=>{
     await Exercise.updateOne({_id:id},{$set:data})
     return {
@@ -38,4 +33,4 @@ const UpdateExerciseById=async (id,data)=>{
     }
 }
 
-module.exports={getAllExercise, addExercise, UpdateExerciseById}
+module.exports={getAllExercise, addExercise, UpdateExerciseById,searchExerciseByQuery}

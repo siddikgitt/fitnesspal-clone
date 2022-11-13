@@ -9,19 +9,39 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { getExerciseDairy, postExercise, postExerciseDairy } from "../../api";
+import { ExerciseContext } from "../../Context/ExerciseContext";
 const exdata = {
   
   name: "",
   type: "",
   min: "",
   calories: "",
+  sets:"",
+  reps:"",
+  wtsets:""
+
 };
 let perEx = JSON.parse(localStorage.getItem("PersonalExercise")) || [];
 function CreateNewMyExercise() {
   const [flag, setflag] = useState(false);
   const [data, setdata] = useState(exdata);
   const [findata, setfin] = useState(perEx);
+  const [type,setType]=useState(data.type)
+
+  // change inputs according to type
+ useEffect(()=>{
+setType(data.type)
+
+ },[data.type])
+ console.log(type,"type")
+
+ 
+// use context
+const {Exercisedata,setExercisedata}=useContext(ExerciseContext)
+
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -30,7 +50,27 @@ function CreateNewMyExercise() {
       ...data,
       [name]: value,
     });
+  
     
+  }
+  const navigate=useNavigate();
+  const postExerciseHandler=async ()=>{
+    console.log(data,"shri")
+    let res=await postExercise(data);
+  
+    let obj={
+      date:new Date().toISOString().slice(0, 10),
+      id:res.data.message._id,
+      newobj:data
+    }
+
+    let exd=await postExerciseDairy(obj);
+    let response=await getExerciseDairy(exd.data.message.date);
+    console.log(response.data.message,"fdsfsdafsadf responmnse")
+
+    setExercisedata(response.data.message[0])
+    navigate("/exercise")
+
   }
   useEffect(() => {
     localStorage.setItem("PersonalExercise", JSON.stringify([...findata]));
@@ -47,21 +87,18 @@ function CreateNewMyExercise() {
         (min == data.min) &&
         (calories == data.calories)
       ) {
-        t = true;
+        // t = true;
       }
       if(data.name==""||data.type==""||data.min==""||data.calories==""){
-        t=true
+        // t=true
       }
     }
-    if (t) {
-      alert("already present");
-    } else {
+    
       setfin([...findata, {id:Date.now(),...data}]);
       setflag(!flag);
       
      
-     
-    }
+    
   }
 
   return (
@@ -115,9 +152,13 @@ function CreateNewMyExercise() {
             </Select>
           </Box>
           {/* Long */}
+
+          {type=="Cardiovascular"||type==""?
+          <>
           <Box mb={"0.5rem"}>
             <Text>How long?:</Text>
             <Input
+            required
               onChange={(e) => handleChange(e)}
               name="min"
               mr="0.5rem"
@@ -146,13 +187,67 @@ function CreateNewMyExercise() {
               background="white"
             />
           </Box>
+          </>:<>
+{/* for strength training */}
+          <Box mb={"0.5rem"}>
+            <Text>sets:</Text>
+            <Input
+              onChange={(e) => handleChange(e)}
+              name="sets"
+              mr="0.5rem"
+              focusBorderColor="none"
+              type="text"
+              w="60px"
+              h="23px"
+              borderRadius="none"
+              boxShadow="rgb(35, 49, 47) 1px 1px 1.5px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"
+              background="white"
+            />
+            
+          </Box>
+          {/* calories burned */}
+          <Box mb="1rem">
+            <Text>Repetitions/Set:</Text>
+            <Input
+              onChange={(e) => handleChange(e)}
+              name="reps"
+              focusBorderColor="none"
+              type="text"
+              w="60px"
+              h="23px"
+              borderRadius="none"
+              boxShadow="rgb(35, 49, 47) 1px 1px 1.5px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"
+              background="white"
+            />
+          </Box>
+          <Box mb={"0.5rem"}>
+            <Text>Weight/Set:</Text>
+            <Input
+              onChange={(e) => handleChange(e)}
+              name="wtsets"
+              mr="0.5rem"
+              focusBorderColor="none"
+              type="text"
+              w="60px"
+              h="23px"
+              borderRadius="none"
+              boxShadow="rgb(35, 49, 47) 1px 1px 1.5px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"
+              background="white"
+            />
+           
+          </Box>
+          
+          </>
+}
+
+
           <Box>
             <Button
               colorScheme="green"
               className="reportBtn"
               h="35px"
               padding={"0 1.5rem"}
-              onClick={() => handleAdd()}
+              onClick={postExerciseHandler}
             >
               Add
             </Button>
