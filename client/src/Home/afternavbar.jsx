@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import StyleHome from "./afternav.module.css"
 
 
@@ -64,11 +65,11 @@ export default function Navbar2(auth){
         {/* HOME HOVER DIV */}
        {auth && hover==0 ? <div className={StyleHome.hoverdiv}>
                 <div className={StyleHome.hover2div}>
-                      <button className={StyleHome.hoverdivbutton}>HOME</button>
-                      <button className={StyleHome.hoverdivbutton}>Goals</button>
-                      <button className={StyleHome.hoverdivbutton}>Check-in</button>
+                      <button className={StyleHome.hoverdivbutton}><Link to="/home">HOME</Link></button>
+                      <button className={StyleHome.hoverdivbutton}><Link to="/home/goal">Goals</Link></button>
+                      <button className={StyleHome.hoverdivbutton}><Link to={"/home/checkin"}>Check-in</Link></button>
                       <button className={StyleHome.hoverdivbutton}>Mail</button>
-                      <button className={StyleHome.hoverdivbutton}>Profile</button>
+                      <button className={StyleHome.hoverdivbutton}><Link to={"/home/profile"}>Profile</Link></button>
                       <button className={StyleHome.hoverdivbutton}>My Blog</button>  
                       <button className={StyleHome.hoverdivbutton}>Friend</button>
                       <button className={StyleHome.hoverdivbutton}>Settings</button>
@@ -78,7 +79,7 @@ export default function Navbar2(auth){
         {/* FOOD HOVER DIV */}
         { auth && hover=== 1 ? <div className={StyleHome.hoverdiv}>
                 <div className={StyleHome.hover2div}>
-                      <button className={StyleHome.hoverdivbutton}>Food Diary</button>
+                      <button className={StyleHome.hoverdivbutton}><Link to={"/food/dairy"}>Food Diary</Link></button>
                       <button className={StyleHome.hoverdivbutton}>Database</button>
                       <button className={StyleHome.hoverdivbutton}>My Foods</button>
                       <button className={StyleHome.hoverdivbutton}>MY Meals</button>
@@ -91,9 +92,9 @@ export default function Navbar2(auth){
         {/* EXERCISE HOVER DIV */}
        { auth && hover===2 ? <div className={StyleHome.hoverdiv}>
                 <div className={StyleHome.hover2div}>
-                      <button className={StyleHome.hoverdivbutton}>Exercise Diary</button>
-                      <button className={StyleHome.hoverdivbutton}>Database</button>
-                      <button className={StyleHome.hoverdivbutton}>My Exercise</button>
+                      <button className={StyleHome.hoverdivbutton}><Link to={"/exercise/diary"}>Exercise Diary</Link></button>
+                      <button className={StyleHome.hoverdivbutton}><Link to={"/exercise/database"}>Database</Link></button>
+                      <button className={StyleHome.hoverdivbutton}><Link to={"/exercise/myexercise"}>My Exercise</Link></button>
                       <button className={StyleHome.hoverdivbutton}>Settings</button>
                       
                 </div>
@@ -102,9 +103,9 @@ export default function Navbar2(auth){
             {/* REPORTS HOVER DUIV */}
            { auth && hover===3 ? <div className={StyleHome.hoverdiv}>
                 <div className={StyleHome.hover2div}>
-                      <button className={StyleHome.hoverdivbutton}>Charts</button>
-                      <button className={StyleHome.hoverdivbutton}>Export Data</button>
-                      <button className={StyleHome.hoverdivbutton}>Weekly Digest</button>
+                      <button className={StyleHome.hoverdivbutton}><Link to={"/reports"}>Charts</Link></button>
+                      <button className={StyleHome.hoverdivbutton}><Link to={"/reports/export"}>Export Data</Link></button>
+                      <button className={StyleHome.hoverdivbutton}><Link to={"/reports/weekly-digest"}>Weekly Digest</Link></button>
                 </div>
         </div> : ""}
         

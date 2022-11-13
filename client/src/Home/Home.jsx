@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { Link } from "react-router-dom";
+// import Navbar2 from "./afternavbar"
 import Footer from "./footer";
 
 import StyleHome from "./home.module.css";
@@ -17,7 +19,6 @@ export default function HomePage() {
           LOG IN
         </h4>
       </div>
-
       {/* GOOD HEALTH DIV START HERE */}
 
       <div className={StyleHome.goodhealthdiv}>
@@ -30,8 +31,10 @@ export default function HomePage() {
             Want to eat more mindfully? Track meals, learn about your habits,
             and reach your goals with MyFitnessPal.
           </p>
-
-          <button className={StyleHome.goodbutton}>START FOR FREE</button>
+=
+          <Link to={"/signup1"}>
+            <button className={StyleHome.goodbutton}>START FOR FREE</button>
+          </Link>
         </div>
         <div className={StyleHome.goodimgdiv}>
           <img
@@ -224,7 +227,11 @@ export default function HomePage() {
         </div>
       </div>
 
-      <button className={StyleHome.vicbutton}>START YOUR JOURNEY TODAY</button>
+      <Link to={"/signup1"}>
+        <button className={StyleHome.vicbutton}>
+          START YOUR JOURNEY TODAY
+        </button>
+      </Link>
 
       {/* RECIPE & INSPIRATION ****************************** */}
 
