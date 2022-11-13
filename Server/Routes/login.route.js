@@ -11,6 +11,8 @@ app.post("/login", async (req, res) => {
       res.send({ message: "Invalid Credentials", error: true });
     }
     let data = { id: user._id, email: user.email, password: user.password };
+    // set id in LS
+    // window.localStorage.setItem("userCred", user_data.id);
     const token = jwt.sign(data, process.env.JWT_SECRETKEY, {
       expiresIn: "5 minutes",
     });
@@ -51,6 +53,9 @@ app.post("/refresh", (req, res) => {
       email: data.email,
       password: data.password,
     };
+
+    // userDetails
+    localStorage.setItem("userCred", user_data.id);
     const new_Token = jwt.sign(user_data, process.env.JWT_SECRETKEY, {
       expiresIn: "5 minutes",
     });

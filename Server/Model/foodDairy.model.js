@@ -1,11 +1,11 @@
 const mongoose=require("mongoose");
 const foodDairySchema=new mongoose.Schema({
-  Date:String,
-  User:{type:mongoose.Schema.Types.ObjectId,ref:"user"},
-  Breakfast:[{type:mongoose.Schema.Types.ObjectId,ref:"food"}],
-  Lunch:[{type:mongoose.Schema.Types.ObjectId,ref:"food"}],
-  Dinner:[{type:mongoose.Schema.Types.ObjectId,ref:"food"}],
-  Snacks:[{type:mongoose.Schema.Types.ObjectId,ref:"food"}]
+  date:String,
+  user:{type:mongoose.Schema.Types.ObjectId,ref:"user"},
+  breakfast:[{type:mongoose.Schema.Types.ObjectId,ref:"food"}],
+  lunch:[{type:mongoose.Schema.Types.ObjectId,ref:"food"}],
+  dinner:[{type:mongoose.Schema.Types.ObjectId,ref:"food"}],
+  snacks:[{type:mongoose.Schema.Types.ObjectId,ref:"food"}]
  
 })
 const FoodDairy= mongoose.model("foodDairy",foodDairySchema);

@@ -23,13 +23,13 @@ const addFood=async (data)=>{
     }
     }
 }
-// const searchFoodByQuery=async (q)=>{
-//     let allFood=await Food.find({FoodDescription:{$regex:q}});
-//     return {
-//         message:allFood,
-//         error:false
-//     }
-// }
+const searchFoodByQuery=async (q)=>{
+    let allFood=await Food.find({FoodDescription:{$regex:q}});
+    return {
+        message:allFood,
+        error:false
+    }
+}
 const UpdateFoodById=async (id,data)=>{
     await Food.updateOne({_id:id},{$set:data})
     return {

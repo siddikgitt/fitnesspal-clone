@@ -23,15 +23,15 @@ app.get("/",async (req,res)=>{
 // or 
 // For debouncing purpose/ suggestion purpose
 
-// app.get("/search",async (req,res)=>{
-//     try {
-//         let {q}=req.query;
-//         let response=await searchFoodByQuery(q);
-//         res.status(200).send(response);
-//     } catch (e) {
-//        res.status(500).send(server_error(e)); 
-//     }
-// })
+app.get("/search",async (req,res)=>{
+    try {
+        let {q}=req.query;
+        let response=await searchFoodByQuery(q);
+        res.status(200).send(response);
+    } catch (e) {
+       res.status(500).send(server_error(e)); 
+    }
+})
 
 // To post any food to database
 
