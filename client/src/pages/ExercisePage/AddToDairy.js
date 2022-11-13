@@ -11,11 +11,22 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { GetExerciseByName } from "../../api";
 import CheckedExeRow from "../../components/ExerciseComp/CheckedExeRow";
 
 function AddToDairy() {
   const [search, setSearch] = useState(false);
+  const [q, setq] = useState("");
   const data = new Array(10).fill(0);
+
+async function  handleSearch(){
+let data =await GetExerciseByName(q)
+console.log(data.data)
+}
+
+
+
 
   return (
     <Flex
@@ -39,9 +50,10 @@ function AddToDairy() {
           placeholder="search"
           w="50%"
           mr="1rem"
+          onChange={(e)=>setq(e.target.value)}
         />
         <Button
-          onClick={() => setSearch(!search)}
+          onClick={handleSearch}
           colorScheme="green"
           className="reportBtn"
         >
@@ -134,9 +146,11 @@ function AddToDairy() {
               </Text>
 
               <Box>
-                <Button colorScheme="green" className="reportBtn">
+                <Link to="/exercise/diary/add_to_diary">
+                <Button colorScheme="green" className="reportBtn" >
                   Add Exercise
                 </Button>
+                </Link>
               </Box>
             </Stack>
           </Stack>

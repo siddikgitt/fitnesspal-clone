@@ -9,7 +9,10 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { getExerciseDairy, postExercise, postExerciseDairy } from "../../api";
+import { ExerciseContext } from "../../Context/ExerciseContext";
 const exdata = {
   
   name: "",
@@ -23,6 +26,11 @@ function CreateNewMyExercise() {
   const [data, setdata] = useState(exdata);
   const [findata, setfin] = useState(perEx);
 
+ 
+// use context
+const {Exercisedata,setExercisedata}=useContext(ExerciseContext)
+
+
   function handleChange(e) {
     const { name, value } = e.target;
 
@@ -30,7 +38,27 @@ function CreateNewMyExercise() {
       ...data,
       [name]: value,
     });
+  
     
+  }
+  const navigate=useNavigate();
+  const postExerciseHandler=async ()=>{
+    console.log(data,"shri")
+    let res=await postExercise(data);
+  
+    let obj={
+      date:new Date().toISOString().slice(0, 10),
+      id:res.data.message._id,
+      newobj:data
+    }
+
+    let exd=await postExerciseDairy(obj);
+    let response=await getExerciseDairy(exd.data.message.date);
+    console.log(response.data.message,"fdsfsdafsadf responmnse")
+
+    setExercisedata(response.data.message[0])
+    navigate("/exercise/diary")
+
   }
   useEffect(() => {
     localStorage.setItem("PersonalExercise", JSON.stringify([...findata]));
@@ -47,21 +75,18 @@ function CreateNewMyExercise() {
         (min == data.min) &&
         (calories == data.calories)
       ) {
-        t = true;
+        // t = true;
       }
       if(data.name==""||data.type==""||data.min==""||data.calories==""){
-        t=true
+        // t=true
       }
     }
-    if (t) {
-      alert("already present");
-    } else {
+    
       setfin([...findata, {id:Date.now(),...data}]);
       setflag(!flag);
       
      
-     
-    }
+    
   }
 
   return (
@@ -152,7 +177,7 @@ function CreateNewMyExercise() {
               className="reportBtn"
               h="35px"
               padding={"0 1.5rem"}
-              onClick={() => handleAdd()}
+              onClick={postExerciseHandler}
             >
               Add
             </Button>
