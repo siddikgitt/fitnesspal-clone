@@ -16,7 +16,8 @@ const UserSchema = new mongoose.Schema({
     daily_activity: String,
     workout_week: Number,
     weekly_goal: String,
-    signup_date: Date
+    signup_date: Date,
+    
 });
 
 const UserModel = mongoose.model("fitnesspal", UserSchema)

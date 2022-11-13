@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
     Box,
     Button,
@@ -15,8 +15,20 @@ import {
     Text,
     VStack,
   } from "@chakra-ui/react";
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/AuthContext';
+import axios from 'axios';
+import { signupUser } from '../../api';
 
 const Signup7 = () => {
+  const {signup,signupHandler,setSignup}=useContext(AuthContext);
+  // console.log(signup);
+
+  const submitHandle = async() => {
+    const user = await signupUser(signup);
+    
+  }
+
   return (
     <div>
         <Center height={"100vh"}>
@@ -33,13 +45,16 @@ const Signup7 = () => {
                 overflow={"auto"}
                 fontSize={"20px"}
                 fontWeight={"bold"}
+              
               >
                 Create a username.
               </Text>
 
-              <Input marginTop={10} placeholder="Create a username" />
+              <Input marginTop={10} placeholder="Create a username"   onChange={(e)=>setSignup({...signup,username:e.target.value})} />
               
               <Flex marginTop={7} gap={5}>
+              <Link to="/signup6">
+
                 <Button
                   colorScheme="teal"
                   variant="outline"
@@ -48,9 +63,12 @@ const Signup7 = () => {
                 >
                   BACK
                 </Button>
-                <Button marginBottom="2" colorScheme={"blue"} w={"100%"}>
+                </Link>
+                <Link to="/signup8">
+                <Button onClick={submitHandle} marginBottom="2" colorScheme={"blue"} w={"100%"}>
                   NEXT
                 </Button>
+                </Link>
               </Flex>
             </Box>
           </Center>

@@ -7,9 +7,22 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthContext";
 
 const Signup3 = () => {
+  const {signup,signupHandler,setSignup}=useContext(AuthContext);
+  const [value, setValue] = useState("");
+  const weightHandler=(e)=>{
+    setValue(e.target.innerText)
+  }
+  const submitHandler=()=>{
+    signupHandler({key:"daily_activity",data:value})
+    console.log(signup.daily_activity)
+    
+  }
+
   return (
     <div>
       <Center height={"100vh"}>
@@ -39,6 +52,9 @@ const Signup3 = () => {
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
+                  onClick={(e)=>{
+                    
+                    setSignup({...signup,daily_activity:e.target.innerText})}}
                 >
                   Not very Active
                 </Text>
@@ -49,6 +65,7 @@ const Signup3 = () => {
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
+                  onClick={(e)=>setSignup({...signup,daily_activity:e.target.innerText})}
                 >
                   Lightly Weight Active
                 </Text>
@@ -59,6 +76,7 @@ const Signup3 = () => {
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
+                  onClick={(e)=>setSignup({...signup,daily_activity:e.target.innerText})}
                 >
                   Active
                 </Text>
@@ -69,12 +87,16 @@ const Signup3 = () => {
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
+                  onClick={(e)=>setSignup({...signup,daily_activity:e.target.innerText})}
                 >
                   Very Active
                 </Text>
               </VStack>
 
               <Flex marginTop={7} gap={5}>
+              <Box w={"50%"}>
+
+                <Link to={"/signup2"}>
                 <Button
                   colorScheme="teal"
                   variant="outline"
@@ -83,9 +105,17 @@ const Signup3 = () => {
                 >
                   BACK
                 </Button>
-                <Button marginBottom="2" colorScheme={"blue"} w={"100%"}>
+                </Link>
+                </Box>
+                <Box w={"50%"}>
+
+                <Link to={"/signup4"}>
+                <Button marginBottom="2" colorScheme={"blue"} w={"100%"} onClick={submitHandler}>
+                  
                   NEXT
                 </Button>
+                  </Link>
+                  </Box>
               </Flex>
             </Box>
           </Center>

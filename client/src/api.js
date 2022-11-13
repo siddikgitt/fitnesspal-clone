@@ -54,7 +54,7 @@ function after_refresh(config){
         url:config.url
     });
 }
-export function signup(user){
+export function signupUser(user){
 return instance.post("/signup",user);
 }
 export function login(user){

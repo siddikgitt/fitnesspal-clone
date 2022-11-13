@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Box,
   Button,
@@ -14,8 +14,12 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/AuthContext";
+
 
 const Signup5 = () => {
+  const {signup,signupHandler,setSignup}=useContext(AuthContext);
   return (
     <div>
       <Center height={"100vh"}>
@@ -33,7 +37,8 @@ const Signup5 = () => {
 
               <Flex gap={5}>
                 <InputGroup>
-                  <Input placeholder="Height (feet)" />
+                  <Input placeholder="Height (feet)" 
+                   onChange={(e)=>setSignup({...signup,height:e.target.value})} />
                   <InputRightElement children={"ft"} />
                 </InputGroup>
                 <InputGroup>
@@ -51,7 +56,7 @@ const Signup5 = () => {
                 How much do you weight?
               </Text>
               <InputGroup>
-                <Input placeholder="Current Weight" />
+                <Input placeholder="Current Weight"  onChange={(e)=>setSignup({...signup,weight:e.target.value})} />
                 <InputRightElement children={"kg"} />
               </InputGroup>
 
@@ -64,22 +69,30 @@ const Signup5 = () => {
                 What's your goal weight?
               </Text>
               <InputGroup>
-                <Input placeholder="Goal Weight" />
+                <Input placeholder="Goal Weight"  onChange={(e)=>setSignup({...signup,goalweight:e.target.value})} />
                 <InputRightElement children={"kg"} />
               </InputGroup>
 
-              <Flex marginTop={7} gap={5}>
-                <Button
-                  colorScheme="teal"
-                  variant="outline"
-                  marginBottom="2"
-                  w={"100%"}
-                >
-                  BACK
-                </Button>
-                <Button marginBottom="2" colorScheme={"blue"} w={"100%"}>
-                  NEXT
-                </Button>
+              <Flex justifyContent={"space-between"} marginTop={7} gap={5}>
+                <Box w={"50%"}>
+                  <Link to={"/signup4"}>
+                    <Button
+                      colorScheme="teal"
+                      variant="outline"
+                      marginBottom="2"
+                      w={"100%"}
+                    >
+                      BACK
+                    </Button>
+                  </Link>
+                </Box>
+                <Box w={"50%"}>
+                  <Link to={"/signup6"}>
+                    <Button marginBottom="2" colorScheme={"blue"} w={"100%"} onClick={()=>console.log(signup)}>
+                      NEXT
+                    </Button>
+                  </Link>
+                </Box>
               </Flex>
             </Box>
           </Center>

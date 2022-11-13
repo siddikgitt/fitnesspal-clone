@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Box,
   Button,
@@ -18,8 +18,11 @@ import {
 
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { GrFacebook } from "react-icons/gr";
+import { AuthContext } from "../../Context/AuthContext";
+import { Link } from "react-router-dom";
 
 const Signup6 = () => {
+  const {signup,signupHandler,setSignup}=useContext(AuthContext);
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
   return (
@@ -42,12 +45,16 @@ const Signup6 = () => {
                 Almost there! Create your account.
               </Text>
 
-              <Input marginTop={10} placeholder="Email Address" />
+              <Input marginTop={10} placeholder="Email Address"  onChange={(e)=>setSignup({...signup,email:e.target.value})} />
               <InputGroup marginTop={2}>
                 <Input
                   pr="4.5rem"
                   type={show ? "text" : "password"}
                   placeholder="Enter password"
+
+
+
+                  onChange={(e)=>setSignup({...signup,password:e.target.value})}
                 />
                 <InputRightElement width="4.5rem">
                   <Button h="1.75rem" size="sm" onClick={handleClick}>
@@ -73,11 +80,11 @@ const Signup6 = () => {
                 <span style={{ color: "blue" }}> Privacy Policy</span> and{" "}
                 <span style={{ color: "blue" }}>Terms</span>.
               </Text>
-
-              <Button mt={5} marginBottom="2" colorScheme={"blue"} w={"100%"}>
+              <Link to="/signup7">
+              <Button mt={5} marginBottom="2" colorScheme={"blue"} w={"100%"} onClick={()=>console.log(signup)}>
                 CONTINUE
               </Button>
-
+              </Link>
               <Text textAlign={"center"}>or</Text>
 
               <Button
