@@ -13,24 +13,30 @@ const FoodDiary = () => {
             <p>Add Food | Quick Tools</p>
           </div>
           <div className="chart">
-          <table>
-            <tr className="charttotal">
-              <th className="category">Calories</th>
-              <th className="category">Carbs</th>
-              <th className="category">Fat</th>
-              <th className="category">Protein</th>
-              <th className="category">Sodium</th>
-              <th className="category">Sugar</th>
-            </tr>
-            {/* <tr className="total">
-              <td className="data">1,370</td>
-              <td className="data">171</td>
-              <td className="data">46</td>
-              <td className="data">69</td>
-              <td className="data">2,300</td>
-              <td className="data">51</td>
-            </tr> */}
-          </table>
+            <div>
+              <h5>Calories</h5>
+              <p>kcal</p>
+            </div>
+            <div>
+              <h5>Carbs</h5>
+              <p>g</p>
+            </div>
+            <div>
+              <h5>Fat</h5>
+              <p>g</p>
+            </div>
+            <div>
+              <h5>Protein</h5>
+              <p>g</p>
+            </div>
+            <div>
+              <h5>Sodium</h5>
+              <p>mg</p>
+            </div>
+            <div>
+              <h5>Sugar</h5>
+              <p>g</p>
+            </div>
           </div>
         </div>
 
@@ -113,7 +119,7 @@ const FoodDiary = () => {
            </div>
 
            <div className="imageinfo">            
-                <h3> 0 cups</h3>
+                <h3> 5 cups</h3>
                 <div className="imageDiv"><img alt='' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2k5bFGmN1u6J4qG251iDYrS74dT5SxBIO2A&usqp=CAU' /></div>           
            </div>
 
