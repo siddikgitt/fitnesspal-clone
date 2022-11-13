@@ -4,14 +4,18 @@ import { Navigate, useNavigate } from "react-router-dom";
 const PrivateRoutes = ({ children }) => {
   const [login, setlogin] = useState(false);
   const userID = localStorage.getItem("fitUserID");
+  
   useEffect(() => {
     if (userID) {
       setlogin(true);
     }
   }, [userID]);
-  if (login) {
-    return children;
+  
+  if(userID){
+    console.log(login,"login")
+    return children
   }
+ 
   return <Navigate to="/login" />;
 };
 
