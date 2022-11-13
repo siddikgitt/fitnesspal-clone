@@ -8,6 +8,7 @@ import StrengthTraining from "../../components/ExerciseComp/StrengthTraining";
 import Note from "../../components/ExerciseComp/Note";
 import { Box, Button } from "@chakra-ui/react";
 import { ExerciseContext } from "../../Context/ExerciseContext";
+import { Link } from "react-router-dom";
 
 let tod=new Date().toISOString().slice(0, 10)
 function ExerciseMain() {
@@ -46,9 +47,11 @@ const [summin,setSummin]=useState(0)
            <Box textAlign='center'
            marginTop='2rem'
            >
-          <Button  
+            <Link to="/reports">
+           <Button  
           colorScheme='green'
           className="reportBtn">View Full Report (Printable)</Button>
+        </Link>
         </Box>
        
         </Box>

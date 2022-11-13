@@ -1,15 +1,21 @@
 import React, { createContext, useEffect, useState } from 'react'
+import { getExerciseDairy } from '../api';
 export const  ExerciseContext = createContext()
 
 
 
 function ExerciseContextProvider({children}) {
+  let currdate=new Date().toISOString().slice(0, 10)
 const [Exercisedata,setExercisedata]=useState({})
-
+async function handleGetExercise(){
+  let response=await getExerciseDairy(currdate);
+  // console.log(response,currdate,"resp")
+  setExercisedata(response.data.message[0])
+  }
  
 useEffect(()=>{
-console.log(Exercisedata);
-},[Exercisedata])
+  handleGetExercise()
+},[])
 
   return (
    <ExerciseContext.Provider value={{Exercisedata,setExercisedata}}>
