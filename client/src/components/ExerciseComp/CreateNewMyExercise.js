@@ -10,7 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React, { useContext, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getExerciseDairy, postExercise, postExerciseDairy } from "../../api";
 import { ExerciseContext } from "../../Context/ExerciseContext";
 const exdata = {
@@ -242,6 +242,7 @@ const {Exercisedata,setExercisedata}=useContext(ExerciseContext)
 
 
           <Box>
+            <Link to="/exercise/create-exercise">
             <Button
               colorScheme="green"
               className="reportBtn"
@@ -251,6 +252,7 @@ const {Exercisedata,setExercisedata}=useContext(ExerciseContext)
             >
               Add
             </Button>
+            </Link>
           </Box>
         </Box>
         <Box w="50%" pb="5rem">

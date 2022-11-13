@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import StyleHome from "./afternav.module.css"
 
 
@@ -7,12 +7,23 @@ import StyleHome from "./afternav.module.css"
 export default function Navbar2(auth){
     const [hover,setHover]=useState(0)
             console.log(auth,hover)
+            const navigate = useNavigate();
+
+            const username = localStorage.getItem("user");
+            console.log(username);
+
+
+      const onLogout = () => {
+            localStorage.removeItem("fitUserID");
+            navigate("/")
+      }
+
     return(
         <>
            {auth ? <div className={StyleHome.nav2div}>
                     <div  className={StyleHome.nav2logodiv}><h4 className={StyleHome.nav2logo}>MyFitnessFriend</h4></div>
                <div className={StyleHome.nav2info}>
-                <p className={StyleHome.nav2ppp}>Hi,</p> <p className={StyleHome.nav2name}>Username</p>
+                <p className={StyleHome.nav2ppp}>Hi,</p> <p className={StyleHome.nav2name}>{username.username?username.username:"username"}</p>
 
                 <p className={StyleHome.nav2ppp}  >|</p>
 
@@ -35,7 +46,7 @@ export default function Navbar2(auth){
 
                 <p  className={StyleHome.nav2ppp}>|</p>
 
-                <p onClick={()=> auth=false} className={StyleHome.nav2logout}>Logout</p>
+                <p onClick={()=> {auth=false; onLogout()}} className={StyleHome.nav2logout} >Logout</p>
 
                 <p  className={StyleHome.nav2ppp}>|</p>
 

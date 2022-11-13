@@ -25,8 +25,11 @@ const Signup7 = () => {
   // console.log(signup);
 
   const submitHandle = async() => {
-    const user = await signupUser(signup);
+    console.log("SIGNUP:", signup);
+    localStorage.setItem("user",JSON.stringify(signup))
     
+    const user = await signupUser(signup);
+    console.log(user)
   }
 
   return (
@@ -50,7 +53,7 @@ const Signup7 = () => {
                 Create a username.
               </Text>
 
-              <Input marginTop={10} placeholder="Create a username"   onChange={(e)=>setSignup({...signup,username:e.target.value})} />
+              <Input required marginTop={10} placeholder="Create a username"   onChange={(e)=>setSignup({...signup,username:e.target.value})} />
               
               <Flex marginTop={7} gap={5}>
               <Link to="/signup6">

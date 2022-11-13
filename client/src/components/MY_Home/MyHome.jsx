@@ -50,7 +50,7 @@ const MyHome = () => {
                   </Box>
                   <Box>
                     <Flex gap={5}>
-                      <Button bgColor={"white"} border={"1px solid black"}><Link to="/exercise/diary">Add Exercise</Link></Button>
+                      <Button bgColor={"white"} border={"1px solid black"}><Link to="/exercise">Add Exercise</Link></Button>
                       <Button bgColor={"white"} border={"1px solid black"}><Link to="/food/dairy">Add Food</Link></Button>
                     </Flex>
                   </Box>

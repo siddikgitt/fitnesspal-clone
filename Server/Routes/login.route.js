@@ -33,7 +33,7 @@ app.post("/signup", async (req, res) => {
   const data = req.body;
   const user = await User.create(data);
   if (user) {
-    return res.status(200).send("Signup Successful");
+    return res.status(200).send("signup successfully");
   }
   return res.status(401).send("Invalid Credentials");
 });

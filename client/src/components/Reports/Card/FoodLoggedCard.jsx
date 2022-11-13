@@ -9,7 +9,7 @@ const FoodLoggedCard = () => {
     </Box>
     <Box>
         <Flex direction='column' h='250px' justify='center' align='center'>
-            <Img src='https://www.myfitnesspal.com/_next/static/media/chef-hat.e63883d4.svg' />
+            <Img w={"100px"} src='https://www.myfitnesspal.com/_next/static/media/chef-hat.e63883d4.svg' />
             <Text>You didn't log any foods this week.</Text>
         </Flex>
     </Box>

@@ -10,6 +10,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const data = JSON.parse(localStorage.getItem("PersonalExercise")) || [];
 let init = {
@@ -42,6 +43,7 @@ function MyExercisePage() {
           Your Personal Exercises
         </Text>
         <Box>
+          <Link to={"/exercise/create-exercise"}>
           <Button
             colorScheme="green"
             className="reportBtn"
@@ -51,6 +53,7 @@ function MyExercisePage() {
           >
             Create Exercise
           </Button>
+          </Link>
         </Box>
       </HStack>
       <hr />

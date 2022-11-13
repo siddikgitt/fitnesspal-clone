@@ -23,7 +23,7 @@ function AddToDairy() {
 async function  handleSearch(){
 let data =await GetExerciseByName(q)
 console.log(data.data)
-setSearch(!search)
+
 }
 
 
