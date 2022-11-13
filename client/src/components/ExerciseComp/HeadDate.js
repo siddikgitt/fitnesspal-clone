@@ -8,7 +8,7 @@ import {
   
   
   import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
-function HeadDate() {
+function HeadDate({currdate,setcurrdate}) {
     const timeElapsed = Date.now();
     const today = new Date(timeElapsed);
     let date = today.toDateString();
@@ -18,6 +18,8 @@ function HeadDate() {
       tomorrow.setDate(today.getDate() + 1);
       date = tomorrow.toDateString();
     };
+
+    // console.log(currdate,"curr date")
   return (
     <Flex justifyContent={"flex-start"} alignItems="center" p={"2"} gap="2">
     <Box>
@@ -78,6 +80,8 @@ function HeadDate() {
             fontSize="2rem"
             color="#666666"
             border={"none"}
+            onChange={(e)=>setcurrdate(e.target.value)}
+            
           />
         </Box>
       </Flex>

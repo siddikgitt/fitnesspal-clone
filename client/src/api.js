@@ -83,3 +83,22 @@ export const searchAllFoodDiary = async(data) => {
     const res = await axios.post("http://localhost:8080/simplefood/searchfood_dairy", data);
     return res;
 }
+
+export function GetExercise(){
+return instance.get("/exercise");
+}
+export function GetExerciseByName(query){
+return instance.get(`/exercise/search?q=${query}`);
+}
+export function postExercise(data){
+    return instance.post("/exercise",data);
+}
+export function postExerciseDairy(data){
+    return instance.post("/exerciseDairy",data)
+}
+export function getExerciseDairy(date){
+    return instance.get(`/exerciseDairy?date=${date}`)
+}
+export function DeleteExercise(id,date){
+    return instance.delete(`/exerciseDairy/${id}?date=${date}`)
+}

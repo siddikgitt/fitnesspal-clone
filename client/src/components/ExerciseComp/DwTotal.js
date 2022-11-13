@@ -14,7 +14,7 @@ import {
     Tbody,
   } from "@chakra-ui/react";
 
-function DwTotal() {
+function DwTotal({summin,sumcal}) {
   return (
     <Box  m='2rem 0'>
 
@@ -41,7 +41,7 @@ function DwTotal() {
               borderBottom="1px solid #e6e6e6"
             >
               <Flex justify='center'>
-                <Text>120 / </Text>
+                <Text>{summin} / </Text>
                 <Text color="#00548F"> 0</Text>
               </Flex>
             </Th>
@@ -54,7 +54,7 @@ function DwTotal() {
               borderBottom="1px solid #e6e6e6"
             >
               <Flex justify='center'>
-                <Text>120 / </Text>
+                <Text>{sumcal} / </Text>
                 <Text color="#00548F"> 0</Text>
               </Flex>
             </Th>
@@ -89,7 +89,7 @@ function DwTotal() {
               color="black"
             >
               <Flex justify='center'>
-                <Text>120 / </Text>
+                <Text>{summin} / </Text>
                 <Text color="#00548F"> 0</Text>
               </Flex>
             </Th>
@@ -101,7 +101,7 @@ function DwTotal() {
               color="black"
             >
               <Flex justify='center'>
-                <Text>120 / </Text>
+                <Text>{sumcal} / </Text>
                 <Text color="#00548F"> 0</Text>
               </Flex>
             </Th>
