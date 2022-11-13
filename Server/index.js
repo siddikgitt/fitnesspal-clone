@@ -9,6 +9,9 @@ const exerciseRouter=require("./Routes/exercise.route")
 const exerciseDairyRouter=require("./Routes/exerciseDairy.route")
 const facebookOauth = require("./Routes/facebookOauth.route")
 const loginRouter = require("./Routes/login.route");
+
+//siddik
+const foodRoute = require("./Routes/searchAdd.route")
 const cors = require("cors");
 
 dbConnect();
@@ -23,6 +26,9 @@ app.use("/exercise",exerciseRouter);
 app.use("/exerciseDairy",exerciseDairyRouter);
 app.use("/auth", facebookOauth);
 app.use("/", loginRouter);
+
+//siddik
+app.use("/simplefood", foodRoute);
 
 
 app.listen(8080, () => {
