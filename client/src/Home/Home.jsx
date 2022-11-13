@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Context/AuthContext";
+import BeforeNavbar from "./BeforeNavbar";
 // import Navbar2 from "./afternavbar"
 import Footer from "./footer";
 
@@ -9,18 +11,19 @@ import StyleHome from "./home.module.css";
 export default function HomePage() {
   //   const [hover,setHover]=useState(0)
   const [card, setCard] = useState(0);
-
+  
+  const [login, setlogin] = useState(false);
+  useEffect(() => {
+    const userID = localStorage.getItem("fitUserID");
+    if(userID){
+      // navigate("/home")
+      setlogin(true);
+    }
+  }, [])
   return (
     <>
-      {/* Navbar  */}
-      <div className={StyleHome.navdiv}>
-        <h4 className={StyleHome.navlogoss}>myfitnesspal</h4>
-        <h4 style={{ cursor: "pointer" }} className={StyleHome.navlogin}>
-          LOG IN
-        </h4>
-      </div>
+      
       {/* GOOD HEALTH DIV START HERE */}
-
       <div className={StyleHome.goodhealthdiv}>
         <div className={StyleHome.gooddiv2}>
           <h1 className={StyleHome.goodh1}>

@@ -1,14 +1,18 @@
-import React from "react";
-import { Navigate } from "react-router-dom";
-
+import React, { useEffect, useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const PrivateRoutes = ({ children }) => {
-  let login = true;
+  const [login, setlogin] = useState(false);
+  const userID = localStorage.getItem("fitUserID");
+  useEffect(() => {
+    if (userID) {
+      setlogin(true);
+    }
+  }, [userID]);
   if (login) {
     return children;
   }
-  return <Navigate to="/login"/>
-  
+  return <Navigate to="/login" />;
 };
 
 export default PrivateRoutes;

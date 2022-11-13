@@ -1,5 +1,5 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import CardioVasular from "../components/ExerciseComp/CardioVasular";
 import CreateNewMyExercise from "../components/ExerciseComp/CreateNewMyExercise";
 import StrengthTraining from "../components/ExerciseComp/StrengthTraining";
@@ -32,10 +32,18 @@ import FoodDairy from "../components/FoodComp/FoodDiary";
 import FoodDiary from "../components/FoodComp/FoodDiary";
 
 const AllRoutes = () => {
-  const login = true;
+  const [login, setlogin] = useState(false);
+  const navigate = useNavigate();
+  const userID = localStorage.getItem("fitUserID");
+  useEffect(() => {
+    if(userID){
+      navigate("/home")
+      setlogin(true);
+    }
+  }, [userID])
   return (
     <div>
-      {!login ? <BeforeNavbar /> : <Navbar2 />}
+      {!login ? <BeforeNavbar/> : <Navbar2 />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
