@@ -1,5 +1,5 @@
 import { Box, Button,  Flex, Text } from '@chakra-ui/react'
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import AllTimeStatsCard from '../../components/Reports/Card/AllTimeStatsCard'
 import CalorieGraph from '../../components/Reports/Card/CalorieGraph'
 import FoodLoggedCard from '../../components/Reports/Card/FoodLoggedCard'
@@ -7,8 +7,23 @@ import MacronutrientGraph from '../../components/Reports/Card/MacronutrientGraph
 import PremiumCard from '../../components/Reports/Card/PremiumCard'
 import WeeklyCard from '../../components/Reports/Card/WeeklyCard'
 import WeeklyLogStatus from '../../components/Reports/Card/WeeklyLogStatus'
+import { ExerciseContext } from '../../Context/ExerciseContext'
 
 const WeeklyDigest = () => {
+
+
+  const {Exercisedata,setExercisedata}=useContext(ExerciseContext)
+  console.log(Exercisedata,"reports")
+
+  const [calories,setCalories]=useState(547)
+
+  useEffect(()=>{
+    let sum =  Exercisedata?.exercise?.reduce((ac,e)=>ac+Number(e.calories),0)
+  setCalories(sum)
+  
+  },[Exercisedata])
+
+
   return (
     <Box>
     <Box h='150px' bg='blue' color='white'>
@@ -19,7 +34,7 @@ const WeeklyDigest = () => {
     </Box>
     <Box w={["90%","90%","70%"]} m='auto' position='relative' top={["0px","0px","-70px"]}>
       <Flex direction={["column","column","row"]} gap='20px'>
-      <WeeklyCard />
+      <WeeklyCard calories={calories} />
       <CalorieGraph />
       </Flex>
     </Box>

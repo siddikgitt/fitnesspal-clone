@@ -5,8 +5,19 @@ import WeightGraph from '../../components/Reports/Card/WeightGraph';
 import { report_select } from '../../components/Reports/selectList';
 import {CSVLink} from "react-csv";
 import { headers } from '../../components/Reports/headersForExport';
+import { useContext } from 'react';
+import { ExerciseContext } from '../../Context/ExerciseContext';
+import { useEffect } from 'react';
 const Reports = () => {
   const [report,setReport]=useState('');
+const {Exercisedata,setExercisedata}=useContext(ExerciseContext)
+const [calories,setCalories]=useState([])
+useEffect(()=>{
+  let arr =  Exercisedata?.exercise?.map((e)=>e.calories)
+setCalories(arr)
+
+},[Exercisedata])
+console.log(calories,"calores")
   const changeHandler=(e)=>{
      setReport(e.target.value)
   }
@@ -54,7 +65,7 @@ const Reports = () => {
           <Text fontSize={['12px','14px','16px']} >Last year</Text> 
           </HStack>
         </Box>
-        <WeightGraph datakey={report} />
+        <WeightGraph calories={calories} datakey={report} />
         </Box>  
     </Box>
   )
