@@ -12,7 +12,7 @@ app.post("/login", async (req, res) => {
     }
     let data = { id: user._id, email: user.email, password: user.password };
     // set id in LS
-    // window.localStorage.setItem("userCred", user_data.id);
+    //set user id
     const token = jwt.sign(data, process.env.JWT_SECRETKEY, {
       expiresIn: "5 minutes",
     });
