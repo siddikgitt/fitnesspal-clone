@@ -1,7 +1,7 @@
 # myFitnessPal - Clone
 
 ## Team members:
-1. Siddikkhan
+1. Siddikkhan Pathan
 2. Vishal Gupta
 3. Shridhar Hakke
 4. Shalini
