@@ -14,7 +14,7 @@ The project has been completed within the duration of 5 days. Each of us had sha
 
 **Original website link**: https://www.myfitnesspal.com/
 
-**Link of our deployed project**: https://fitnesspal-clone.netlify.app/
+**Link of our deployed project**: https://fitnesspal-clone-22h624abk-siddikgitt.vercel.app/home
 
 **Link of our video presentation**: https://drive.google.com/drive/folders/1mN15YnVec4XUg22rny8Rg5y1403KiHw9?usp=sharing
 
