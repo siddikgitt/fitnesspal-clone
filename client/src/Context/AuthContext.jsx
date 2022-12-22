@@ -5,7 +5,7 @@ const init = {
   email: "",
   username: "",
   password: "",
-  dob: Date,
+  dob: "",
   goal: "",
   gender: "",
   height: "",

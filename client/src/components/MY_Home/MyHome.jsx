@@ -1,6 +1,7 @@
 import { Box, Button, Center, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
+import { Label } from "recharts";
 
 const MyHome = () => {
   return (
@@ -22,11 +23,11 @@ const MyHome = () => {
             <Flex>
               <Box>
                 <Box w={120} h={120} bgColor={"#e6e6e6"}>
-                  <label for="file-input">
+                  <Label for="file-input">
                     <Center>
                       <Text>Upload Photo</Text>
                     </Center>
-                  </label>
+                  </Label>
 
                   <input
                     style={{ display: "none" }}
@@ -46,12 +47,18 @@ const MyHome = () => {
                 <Flex gap={20}>
                   <Box>
                     <Text>Calories Remaining</Text>
-                    <Text fontWeight={"bold"} color={"#85c400 "} fontSize={31}>2710</Text>
+                    <Text fontWeight={"bold"} color={"#85c400 "} fontSize={31}>
+                      2710
+                    </Text>
                   </Box>
                   <Box>
                     <Flex gap={5}>
-                      <Button bgColor={"white"} border={"1px solid black"}><Link to="/exercise">Add Exercise</Link></Button>
-                      <Button bgColor={"white"} border={"1px solid black"}><Link to="/food/dairy">Add Food</Link></Button>
+                      <Button bgColor={"white"} border={"1px solid black"}>
+                        <Link to="/exercise">Add Exercise</Link>
+                      </Button>
+                      <Button bgColor={"white"} border={"1px solid black"}>
+                        <Link to="/food/dairy">Add Food</Link>
+                      </Button>
                     </Flex>
                   </Box>
                 </Flex>

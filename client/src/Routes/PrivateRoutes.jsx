@@ -12,7 +12,7 @@ const PrivateRoutes = ({ children }) => {
   }, [userID]);
   
   if(userID){
-    console.log(login,"login")
+
     return children
   }
  

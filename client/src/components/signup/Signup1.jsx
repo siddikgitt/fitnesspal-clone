@@ -1,8 +1,19 @@
-import { Box, Button, Center, Flex, Input, Text } from "@chakra-ui/react";
-import React from "react";
+import { Box, Button, Center, Text, useToast } from "@chakra-ui/react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Signup1 = () => {
+  const toast =useToast()
+  useEffect(() => {
+    toast({
+      title: "Welcome to Myfitnesspal",
+      description: "Please Continue..",
+      status: "success",
+      duration: 2000,
+      position: "top",
+      isClosable: true,
+    });
+  }, []);
   return (
     <>
         <Center height={"100vh"}>

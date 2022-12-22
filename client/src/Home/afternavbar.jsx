@@ -6,11 +6,9 @@ import StyleHome from "./afternav.module.css"
 
 export default function Navbar2(auth){
     const [hover,setHover]=useState(0)
-            console.log(auth,hover)
             const navigate = useNavigate();
-
             const username = localStorage.getItem("user");
-            console.log(username);
+            // console.log(username);
 
 
       const onLogout = () => {
