@@ -58,8 +58,7 @@ export function signupUser(user){
 return instance.post("/signup",user);
 }
 export async function login(user){
-// return instance.post("/login",user);
-    // localStorage.setItem("");
+
     let data = await axios.post("https://fierce-hen-pajamas.cyclic.app/login", user);
     console.log(data)
 }

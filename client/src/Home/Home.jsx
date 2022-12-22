@@ -1,9 +1,5 @@
-import { useContext, useEffect, useState } from "react";
-
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../Context/AuthContext";
-import BeforeNavbar from "./BeforeNavbar";
-// import Navbar2 from "./afternavbar"
 import Footer from "./footer";
 
 import StyleHome from "./home.module.css";
@@ -12,19 +8,18 @@ export default function HomePage() {
   //   const [hover,setHover]=useState(0)
   const [card, setCard] = useState(0);
   const navigate = useNavigate();
-  
+
   const [login, setlogin] = useState(false);
   const userID = localStorage.getItem("fitUserID");
   useEffect(() => {
-    if(userID){
-      console.log(userID);
+    if (userID) {
+      // console.log(userID);
       setlogin(true);
-      navigate("/home")
+      navigate("/home");
     }
-  }, [userID])
+  }, [userID]);
   return (
     <>
-      
       {/* GOOD HEALTH DIV START HERE */}
       <div className={StyleHome.goodhealthdiv}>
         <div className={StyleHome.gooddiv2}>
@@ -36,7 +31,7 @@ export default function HomePage() {
             Want to eat more mindfully? Track meals, learn about your habits,
             and reach your goals with MyFitnessPal.
           </p>
-=
+          =
           <Link to={"/signup1"}>
             <button className={StyleHome.goodbutton}>START FOR FREE</button>
           </Link>

@@ -28,7 +28,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import BeforeNavbar from "../Home/BeforeNavbar";
 import Goals from "../components/MY_Home/Goals";
 import AddFood from "../components/FoodComp/AddFood";
-import FoodDairy from "../components/FoodComp/FoodDiary";
+
 import FoodDiary from "../components/FoodComp/FoodDiary";
 
 const AllRoutes = () => {
@@ -68,7 +68,7 @@ const AllRoutes = () => {
 
         <Route
           path="/home/profile"
-          element={
+   le       element={
             <PrivateRoutes>
               <Profile />
             </PrivateRoutes>

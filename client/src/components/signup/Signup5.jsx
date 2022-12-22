@@ -7,19 +7,32 @@ import {
   Input,
   InputGroup,
   InputRightElement,
-  Radio,
-  RadioGroup,
-  Select,
-  Stack,
   Text,
-  VStack,
+  useToast,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 
-
 const Signup5 = () => {
-  const {signup,signupHandler,setSignup}=useContext(AuthContext);
+  const { signup, setSignup } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const toast = useToast();
+
+  const submitHandler = () => {
+    if (signup.height && signup.weight && signup.goalweight) {
+      navigate("/signup6");
+    } else {
+      toast({
+        title: "fill all the data",
+        description: "",
+        status: "error",
+        duration: 2000,
+        position: "top",
+        isClosable: true,
+      });
+    }
+  };
+
   return (
     <div>
       <Center height={"100vh"}>
@@ -37,8 +50,12 @@ const Signup5 = () => {
 
               <Flex gap={5}>
                 <InputGroup>
-                  <Input placeholder="Height (feet)" 
-                   onChange={(e)=>setSignup({...signup,height:e.target.value})} />
+                  <Input
+                    placeholder="Height (feet)"
+                    onChange={(e) =>
+                      setSignup({ ...signup, height: e.target.value })
+                    }
+                  />
                   <InputRightElement children={"ft"} />
                 </InputGroup>
                 <InputGroup>
@@ -56,7 +73,12 @@ const Signup5 = () => {
                 How much do you weight?
               </Text>
               <InputGroup>
-                <Input placeholder="Current Weight"  onChange={(e)=>setSignup({...signup,weight:e.target.value})} />
+                <Input
+                  placeholder="Current Weight"
+                  onChange={(e) =>
+                    setSignup({ ...signup, weight: e.target.value })
+                  }
+                />
                 <InputRightElement children={"kg"} />
               </InputGroup>
 
@@ -69,7 +91,12 @@ const Signup5 = () => {
                 What's your goal weight?
               </Text>
               <InputGroup>
-                <Input placeholder="Goal Weight"  onChange={(e)=>setSignup({...signup,goalweight:e.target.value})} />
+                <Input
+                  placeholder="Goal Weight"
+                  onChange={(e) =>
+                    setSignup({ ...signup, goalweight: e.target.value })
+                  }
+                />
                 <InputRightElement children={"kg"} />
               </InputGroup>
 
@@ -87,11 +114,14 @@ const Signup5 = () => {
                   </Link>
                 </Box>
                 <Box w={"50%"}>
-                  <Link to={"/signup6"}>
-                    <Button marginBottom="2" colorScheme={"blue"} w={"100%"} onClick={()=>console.log(signup)}>
-                      NEXT
-                    </Button>
-                  </Link>
+                  <Button
+                    marginBottom="2"
+                    colorScheme={"blue"}
+                    w={"100%"}
+                    onClick={submitHandler}
+                  >
+                    NEXT
+                  </Button>
                 </Box>
               </Flex>
             </Box>
