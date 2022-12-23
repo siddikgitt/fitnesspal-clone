@@ -30,6 +30,7 @@ import Signup5 from "../components/signup/Signup5_height_weightForm";
 import Signup6 from "../components/signup/Signup6_CreateAccount";
 import Signup7 from "../components/signup/Signup7_UsernameForm";
 import Signup8 from "../components/signup/Signup8_calorieGoal";
+import { Box } from "@chakra-ui/react";
 
 const AllRoutes = () => {
   const [login, setlogin] = useState(false);
@@ -42,12 +43,11 @@ const AllRoutes = () => {
     }
   }, [userID])
   return (
-    <div>
+    <Box w={'100%'}>
       {!login ? <BeforeNavbar/> : <Navbar2 />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
-
         <Route path="/signup1" element={<Signup1 />} />
         <Route path="/signup2" element={<Signup2 />} />
         <Route path="/signup3" element={<Signup3 />} />
@@ -193,7 +193,7 @@ const AllRoutes = () => {
           }
         />
       </Routes>
-    </div>
+    </Box>
   );
 };
 
