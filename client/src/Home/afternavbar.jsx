@@ -1,4 +1,4 @@
-import { Box, Hide } from "@chakra-ui/react";
+import { Box, Button, Hide } from "@chakra-ui/react";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import StyleHome from "./afternav.module.css";
@@ -48,14 +48,12 @@ export default function Navbar2(auth) {
                 alt=""
               />
             </div>
-            <Hide below='md'>
-
-          
-            <p className={StyleHome.nav2ppp}>|</p>
-            <p className={StyleHome.nav2color}>Help</p>
-            <p className={StyleHome.nav2ppp}>|</p>
-            <p className={StyleHome.nav2color}>Settings</p>
-            <p className={StyleHome.nav2ppp}>|</p>
+            <Hide below="md">
+              <p className={StyleHome.nav2ppp}>|</p>
+              <p className={StyleHome.nav2color}>Help</p>
+              <p className={StyleHome.nav2ppp}>|</p>
+              <p className={StyleHome.nav2color}>Settings</p>
+              <p className={StyleHome.nav2ppp}>|</p>
             </Hide>
             <p
               onClick={() => {
@@ -93,7 +91,9 @@ export default function Navbar2(auth) {
             w={{ lg: "70%", md: "80%", sm: "90%", base: "100%" }}
           >
             <button
-              onClick={() => setHover(0)}
+              onClick={() => {setHover(0)
+                  navigate("/home")
+            }}
               style={
                 hover == 0
                   ? { backgroundColor: "rgb(32, 76, 115)", width: "250px" }
@@ -104,7 +104,10 @@ export default function Navbar2(auth) {
               MY HOME
             </button>
             <button
-              onClick={() => setHover(1)}
+              onClick={() => {
+                setHover(1);
+                navigate("/food/dairy");
+              }}
               style={
                 hover == 1
                   ? { backgroundColor: "rgb(32, 76, 115)" }
@@ -136,12 +139,11 @@ export default function Navbar2(auth) {
             >
               REPORTS
             </button>
-            <Hide  below="sm">
+            <Hide below="sm">
+              <button className={StyleHome.homebutton}>APPS</button>
 
-            <button className={StyleHome.homebutton}>APPS</button>
-          
-            <button className={StyleHome.homebutton}>COMMUNITY</button>
-            <button className={StyleHome.homebutton}>BLOG</button>
+              <button className={StyleHome.homebutton}>COMMUNITY</button>
+              <button className={StyleHome.homebutton}>BLOG</button>
             </Hide>
             <Hide below="md">
               <button className={StyleHome.homebutton}>PREMIUM</button>
