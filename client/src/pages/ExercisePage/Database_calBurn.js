@@ -1,36 +1,34 @@
 import {
   Box,
   Button,
-  Container,
   Flex,
   HStack,
   Input,
-  Radio,
-  RadioGroup,
   Select,
   Stack,
   Text,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 
 function Database_calBurn() {
   const data = new Array(10).fill(0);
 
   return (
     <Flex
-      w="60%"
-      // border="1px solid red"
-      m="auto"
+      w={{lg:'80%',md:'80%',sm:'100%',base:'130%'}}
+      m=" 2rem auto"
       flexFlow="column"
-      height="500px"
+      height="auto"
+      p={'1rem'}
+
     >
       <Text fontSize="1.5rem " fontWeight="bold" color="#00548f">
         Calories Burned From Exercise
       </Text>
       <hr />
       {/* search */}
-      <HStack justifyContent={"space-between"}>
-        <Box w="50%" m='1rem 0'>
+      <HStack justifyContent={"space-between"} flexDir={{lg:'row',md:'row',sm:"column",base:"column"}}>
+        <Box w={{lg:'50%',md:'50%',sm:'80%',base:'100%'}} m='1rem 0'>
           <Text color="#00548f" fontSize="17px" fontWeight="bold" m='0 0 0.5rem  0'>
             Search our exercise database by name:
           </Text>
@@ -53,7 +51,7 @@ function Database_calBurn() {
           </HStack>
         </Box>
         {/* secound search bar */}
-        <Box w="45%">
+        <Box w={{lg:'50%',md:'50%',sm:'80%',base:'100%'}}>
           <Text color="#00548f" fontSize="17px" fontWeight="bold"
           m='0 0 0.5rem  0'
           >

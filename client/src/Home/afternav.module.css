@@ -310,6 +310,7 @@
     height: 98%;
     display: flex;
     gap: "20px";
+    border: 1px solid red;
   }
   .homebutton {
     background-color: rgb(36, 88, 184);

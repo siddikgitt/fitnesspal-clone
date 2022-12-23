@@ -85,7 +85,7 @@ export default function Navbar2(auth) {
       )}
 
       {auth ? (
-        <Box className={StyleHome.myhome}>
+        <Box className={StyleHome.myhome}  >
           <Box
             className={StyleHome.homediv}
             w={{ lg: "70%", md: "80%", sm: "90%", base: "100%" }}
@@ -118,7 +118,9 @@ export default function Navbar2(auth) {
               FOOD
             </button>
             <button
-              onClick={() => setHover(2)}
+              onClick={() => {setHover(2)
+                navigate("/exercise")
+              }}
               style={
                 hover == 2
                   ? { backgroundColor: "rgb(32, 76, 115)" }
@@ -182,7 +184,7 @@ export default function Navbar2(auth) {
 
       {/* FOOD HOVER DIV */}
       {auth && hover === 1 ? (
-        <div className={StyleHome.hoverdiv}>
+        <div className={StyleHome.hoverdiv} >
           <div className={StyleHome.hover2div}>
             <button className={StyleHome.hoverdivbutton}>
               <Link to={"/food/dairy"}>Food Diary</Link>
@@ -200,7 +202,7 @@ export default function Navbar2(auth) {
 
       {/* EXERCISE HOVER DIV */}
       {auth && hover === 2 ? (
-        <div className={StyleHome.hoverdiv}>
+        <div className={StyleHome.hoverdiv} >
           <div className={StyleHome.hover2div}>
             <button className={StyleHome.hoverdivbutton}>
               <Link to={"/exercise"}>Exercise Diary</Link>
