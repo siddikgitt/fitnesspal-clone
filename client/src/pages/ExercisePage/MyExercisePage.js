@@ -221,7 +221,7 @@ function MyExercisePage() {
                 Minutes:
               </Text>
               <Input
-              placeholder={`(${matchel.min})`}
+              placeholder={matchel.min?`(${matchel.min})`:'0'}
               onChange={(e) => handleEdit(e)}
               name="min"
                 focusBorderColor="none"
@@ -240,7 +240,7 @@ function MyExercisePage() {
                 Calories:
               </Text>
               <Input
-              placeholder={`(${matchel.calories})`}
+              placeholder={matchel.calories?`(${matchel.calories})`:'0'}
               onChange={(e) => handleEdit(e)}
               name="calories"
                 focusBorderColor="none"
