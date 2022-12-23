@@ -7,14 +7,7 @@ import Login from "../components/Login";
 import CheckIn from "../components/MY_Home/CheckIn";
 import MyHome from "../components/MY_Home/MyHome";
 import Profile from "../components/MY_Home/Profile";
-import Signup1 from "../components/signup/Signup1";
-import Signup2 from "../components/signup/Signup2";
-import Signup3 from "../components/signup/Signup3";
-import Signup4 from "../components/signup/Signup4";
-import Signup5 from "../components/signup/Signup5";
-import Signup6 from "../components/signup/Signup6";
-import Signup7 from "../components/signup/Signup7";
-import Signup8 from "../components/signup/Signup8";
+import Signup2 from "../components/signup/Signup2_WeightGoal";
 import HomePage from "../Home/Home";
 import Navbar2 from "../Home/afternavbar";
 import AddToDairy from "../pages/ExercisePage/AddToDairy";
@@ -30,6 +23,14 @@ import Goals from "../components/MY_Home/Goals";
 import AddFood from "../components/FoodComp/AddFood";
 
 import FoodDiary from "../components/FoodComp/FoodDiary";
+import Signup1 from "../components/signup/Signup_Introduction";
+import Signup3 from "../components/signup/Signup3_ActivityLevel";
+import Signup4 from "../components/signup/Signup4_Basic_Details";
+import Signup5 from "../components/signup/Signup5_height_weightForm";
+import Signup6 from "../components/signup/Signup6_CreateAccount";
+import Signup7 from "../components/signup/Signup7_UsernameForm";
+import Signup8 from "../components/signup/Signup8_calorieGoal";
+import { Box } from "@chakra-ui/react";
 
 const AllRoutes = () => {
   const [login, setlogin] = useState(false);
@@ -42,12 +43,11 @@ const AllRoutes = () => {
     }
   }, [userID])
   return (
-    <div>
+    <Box w={'100%'}>
       {!login ? <BeforeNavbar/> : <Navbar2 />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
-
         <Route path="/signup1" element={<Signup1 />} />
         <Route path="/signup2" element={<Signup2 />} />
         <Route path="/signup3" element={<Signup3 />} />
@@ -193,7 +193,7 @@ const AllRoutes = () => {
           }
         />
       </Routes>
-    </div>
+    </Box>
   );
 };
 

@@ -6,7 +6,7 @@ import HeadDate from "../../components/ExerciseComp/HeadDate";
 import DwTotal from "../../components/ExerciseComp/DwTotal";
 import StrengthTraining from "../../components/ExerciseComp/StrengthTraining";
 import Note from "../../components/ExerciseComp/Note";
-import { Box, Button } from "@chakra-ui/react";
+import { Box, Button, Center } from "@chakra-ui/react";
 import { ExerciseContext } from "../../Context/ExerciseContext";
 import { Link } from "react-router-dom";
 
@@ -30,7 +30,8 @@ const [summin,setSummin]=useState(0)
 
 
   return (
-    <Box className="section">
+    <Center m='3rem auto'  w={{lg:'70%',md:'90%',sm:'100%',base:'140%'}} border='1px solid lightgrey'p='1rem'>
+    <Box className="section" w={'100%'}>
       <Box>
         <HeadDate currdate={currdate} setcurrdate={setcurrdate} />
         {/* table content */}
@@ -59,6 +60,7 @@ const [summin,setSummin]=useState(0)
        
       </Box>
     </Box>
+    </Center>
   );
 }
 

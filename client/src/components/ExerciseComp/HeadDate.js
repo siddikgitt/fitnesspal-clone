@@ -4,7 +4,7 @@ import {
     Input,
     Text,
   } from "@chakra-ui/react";
-  import React, { useState } from "react";
+  import React from "react";
   
   
   import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
@@ -19,7 +19,7 @@ function HeadDate({currdate,setcurrdate}) {
       date = tomorrow.toDateString();
     };
 
-    // console.log(currdate,"curr date")
+    //header date section of exercise page
   return (
     <Flex justifyContent={"flex-start"} alignItems="center" p={"2"} gap="2">
     <Box>
@@ -35,7 +35,7 @@ function HeadDate({currdate,setcurrdate}) {
       <Flex
         justifyContent="center"
         fontSize={{ base: "14px", md: "16px", lg: "18px" }}
-        w="70%"
+        w={{lg:'70%',md:'90%',sm:'100%',base:'100%'}}
         gap="2px"
         alignItems={"center"}
       >
@@ -49,9 +49,11 @@ function HeadDate({currdate,setcurrdate}) {
         >
           <AiFillCaretLeft fontWeight="extrabold" fontSize={"1.5rem"} />
         </Box>
+
+        {/* //displaying date */}
         <Box
           p={"2"}
-          w={"70%"}
+          w={"100%"}
           textAlign="center"
           color={"#FFFFFF"}
           backgroundColor={"#00548f"}

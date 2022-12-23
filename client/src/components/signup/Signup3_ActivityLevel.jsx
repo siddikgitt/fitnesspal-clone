@@ -3,16 +3,15 @@ import {
   Button,
   Center,
   Flex,
-  Input,
   Text,
   useToast,
   VStack,
 } from "@chakra-ui/react";
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 
-const Signup2 = () => {
+const Signup3 = () => {
   const { signup, signupHandler, setSignup } = useContext(AuthContext);
   const [value, setValue] = useState("");
   const toast = useToast();
@@ -20,7 +19,7 @@ const Signup2 = () => {
   const submitHandler = () => {
     if (!value) {
       toast({
-        title: "Select Weight Goal",
+        title: "Choose your Activity Level",
         description: "",
         status: "error",
         duration: 2000,
@@ -28,9 +27,9 @@ const Signup2 = () => {
         isClosable: true,
       });
     }
-    signupHandler({ key: "currweight", data: value });
+    signupHandler({ key: "daily_activity", data: value });
+  
   };
-
 
   return (
     <div>
@@ -40,7 +39,7 @@ const Signup2 = () => {
             <Box
               borderRadius="10"
               boxShadow={"rgba(0, 0, 0, 0.35) 0px 5px 15px;"}
-              padding={"90px 100px"}
+              padding={"50px 70px"}
               alignContent={"center"}
             >
               <Text
@@ -50,7 +49,7 @@ const Signup2 = () => {
                 fontWeight={"bold"}
                 marginBottom="10"
               >
-                What is your weight goal?
+                What is your baseline activity level?
               </Text>
 
               <VStack spacing={4}>
@@ -58,61 +57,89 @@ const Signup2 = () => {
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
                   border={
-                    value == "Lose Weight"
+                    value == "Not very Active"
                       ? "2px solid black"
-                      : "1.2px solid gray"
+                      : "1.5px solid gray"
                   }
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
                   onClick={(e) => {
-                    setSignup({ ...signup, goal: e.target.innerText });
+                    setSignup({
+                      ...signup,
+                      daily_activity: e.target.innerText,
+                    });
                     setValue(e.target.innerText);
                   }}
                 >
-                  Lose Weight
+                  Not very Active
                 </Text>
                 <Text
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
                   border={
-                    value == "Maintain Weight"
+                    value == "Lightly Weight Active"
                       ? "2px solid black"
-                      : "1.2px solid gray"
+                      : "1.5px solid gray"
                   }
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
                   onClick={(e) => {
-                    setSignup({ ...signup, goal: e.target.innerText });
+                    setSignup({
+                      ...signup,
+                      daily_activity: e.target.innerText,
+                    });
                     setValue(e.target.innerText);
                   }}
                 >
-                  Maintain Weight
+                  Lightly Weight Active
                 </Text>
                 <Text
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
                   border={
-                    value == "Gain Weight"
-                      ? "2px solid black"
-                      : "1.2px solid gray"
+                    value == "Active" ? "2px solid black" : "1.5px solid gray"
                   }
                   w="100%"
                   textAlign={"center"}
                   padding={"15px 0px"}
                   onClick={(e) => {
-                    setSignup({ ...signup, goal: e.target.innerText });
+                    setSignup({
+                      ...signup,
+                      daily_activity: e.target.innerText,
+                    });
                     setValue(e.target.innerText);
                   }}
                 >
-                  Gain Weight
+                  Active
+                </Text>
+                <Text
+                  _hover={{ border: "1.5px solid black" }}
+                  borderRadius={7}
+                  border={
+                    value == "Very Active"
+                      ? "2px solid black"
+                      : "1.5px solid gray"
+                  }
+                  w="100%"
+                  textAlign={"center"}
+                  padding={"15px 0px"}
+                  onClick={(e) => {
+                    setSignup({
+                      ...signup,
+                      daily_activity: e.target.innerText,
+                    });
+                    setValue(e.target.innerText);
+                  }}
+                >
+                  Very Active
                 </Text>
               </VStack>
 
               <Flex marginTop={7} gap={5}>
                 <Box w={"50%"}>
-                  <Link to={"/signup1"}>
+                  <Link to={"/signup2"}>
                     <Button
                       colorScheme="teal"
                       variant="outline"
@@ -124,7 +151,7 @@ const Signup2 = () => {
                   </Link>
                 </Box>
                 <Box w={"50%"}>
-                  <Link to={value ? "/signup3" : "/signup2"}>
+                  <Link to={value?"/signup4":"/signup3"}>
                     <Button
                       marginBottom="2"
                       colorScheme={"blue"}
@@ -144,4 +171,4 @@ const Signup2 = () => {
   );
 };
 
-export default Signup2;
+export default Signup3;

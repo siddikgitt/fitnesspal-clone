@@ -48,13 +48,14 @@ function HeadDate() {
           <AiFillCaretLeft fontWeight="extrabold" fontSize={"1.5rem"} />
         </Box>
         <Box
-          p={"5"}
-          w={"100%"}
+          p={"2"}
+          w='200px'
           textAlign="center"
           color={"#FFFFFF"}
           backgroundColor={"#00548f"}
           borderRadius="3"
           fontWeight={"bold"}
+    
         >
           {date}
         </Box>

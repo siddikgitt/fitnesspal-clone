@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { searchAllFoodDiary } from "../../api";
@@ -18,10 +19,10 @@ const FoodDiary = () => {
   useEffect(() => {
     searchData()
   }, [])
-  
+  // foor diary component where user can add food to his plan
   return (
-    <div className="fooddiaryDiv">
-      <div className="foodDiaryBox">
+    <Box m='auto'   w={{lg:"90%",md:'90%',sm:'100%',base:'140%'}}>
+      <Box className="foodDiaryBox" p='2rem 1rem'  border={'1px solid lightgrey'} >
         <HeadDate />
         <div className="breakfast">
           <div>
@@ -85,7 +86,7 @@ const FoodDiary = () => {
           click here:
         </h5>
         <button className="btn">Complete This Entry</button>
-      </div>
+      </Box>
       <div className="lastsection">
         <div className="waterBlock">
           <h2>Water Consumption</h2>
@@ -122,7 +123,7 @@ const FoodDiary = () => {
           <input />
         </div>
       </div>
-    </div>
+    </Box>
   );
 };
 

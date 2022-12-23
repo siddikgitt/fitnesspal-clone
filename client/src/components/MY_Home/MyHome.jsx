@@ -6,8 +6,15 @@ import { Label } from "recharts";
 const MyHome = () => {
   return (
     <>
-      <Center mt={"10%"}>
-        <Box w={"50%"} backgroundColor={"#f6f6f6"}>
+      <Center
+        m={"10% auto"}
+        ml={{ lg: "0", base: "4rem" }}
+      >
+        <Box
+          w={{ lg: "auto", md: "80%", sm: "100%" }}
+          backgroundColor={"#f6f6f6"}
+          p='2rem'
+        >
           <Box bgColor={"blue"}>
             <Flex
               padding={2}
@@ -20,24 +27,26 @@ const MyHome = () => {
           </Box>
 
           <Box marginTop={5}>
-            <Flex>
+            <Flex flexDir={{ lg: "row",md:'row',sm:'row', base: "column" }}>
               <Box>
-                <Box w={120} h={120} bgColor={"#e6e6e6"}>
-                  <Label for="file-input">
-                    <Center>
-                      <Text>Upload Photo</Text>
-                    </Center>
-                  </Label>
+                <Center>
+                  <Box w={120} h={120} bgColor={"#e6e6e6"}>
+                    <Label for="file-input">
+                      <Center>
+                        <Text>Upload Photo</Text>
+                      </Center>
+                    </Label>
 
-                  <input
-                    style={{ display: "none" }}
-                    id="file-input"
-                    type="file"
-                  />
-                </Box>
+                    <input
+                      style={{ display: "none" }}
+                      id="file-input"
+                      type="file"
+                    />
+                  </Box>
+                </Center>
 
                 {/* KG GAINED */}
-                <Box>
+                <Box as='center'>
                   <Text fontSize={20}>1 KG Gained</Text>
                 </Box>
               </Box>
@@ -52,7 +61,15 @@ const MyHome = () => {
                     </Text>
                   </Box>
                   <Box>
-                    <Flex gap={5}>
+                    <Flex
+                      gap={5}
+                      flexDir={{
+                        lg: "row",
+                        md: "row",
+                        sm: "column",
+                        base: "column",
+                      }}
+                    >
                       <Button bgColor={"white"} border={"1px solid black"}>
                         <Link to="/exercise">Add Exercise</Link>
                       </Button>

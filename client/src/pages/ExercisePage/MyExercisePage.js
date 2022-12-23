@@ -37,8 +37,10 @@ function MyExercisePage() {
   }
 
   return (
-    <Flex w="60%" justifyContent={"center"} m="5rem auto" flexFlow="column">
-      <HStack mb={"0.3rem"} justifyContent={"space-between"}>
+    <Flex w={{lg:"70%",md:'80%',sm:'95%',base:'100%'}} justifyContent={"center"} m="5rem auto" flexFlow="column" 
+    pl={{lg:0,md:0,sm:"2rem",base:"2rem"}}
+    >
+      <HStack mb={"0.3rem"} justifyContent={"space-between"}   >
         <Text fontSize="1.3rem " fontWeight="bold" color="#00548f">
           Your Personal Exercises
         </Text>
@@ -59,10 +61,11 @@ function MyExercisePage() {
       <hr />
 
       {/* TExt */}
-      <HStack justifyContent={"space-between"} alignItems="" mt="0.5rem">
+      <HStack justifyContent={"space-between"} alignItems="" mt="0.5rem" 
+      flexDir={{lg:'row',md:'row',sm:'column',base:'column'}}
+      >
         <Box
-          w="50%"
-          // border={"1px solid black"}
+          w={{lg:"50%",md:"50%",sm:"90%",base:'90%'}}
         >
           <Text w="100%" color={"black"} fontSize={"13px"} fontWeight="bold">
             To edit or delete a personal exercise, click on that exercise below.
@@ -125,6 +128,7 @@ function MyExercisePage() {
                         {e.name}
                       </Text>
                     ))}
+                   <Text color="lightgrey">  {data.length?"":"Matched Exercises will be displayed here"}</Text>
                   </Box>
                 </Stack>
               </Box>
@@ -138,7 +142,7 @@ function MyExercisePage() {
           p="1rem"
           rowGap={"1rem"}
           bg="#f6f6f6"
-          w="45%"
+          w={{lg:"45%",md:"45%",sm:"90%",base:'90%'}}
           borderBottom={"1px solid lightgrey"}
           h={"320px"}
         >
@@ -150,7 +154,7 @@ function MyExercisePage() {
               Name:
             </Text>
             <Input
-              placeholder={`(${matchel.name})`}
+              placeholder={matchel.name?`(${matchel.name})`:"exercise name"}
               onChange={(e) => handleEdit(e)}
               name="name"
               focusBorderColor="none"
@@ -217,7 +221,7 @@ function MyExercisePage() {
                 Minutes:
               </Text>
               <Input
-              placeholder={`(${matchel.min})`}
+              placeholder={matchel.min?`(${matchel.min})`:'0'}
               onChange={(e) => handleEdit(e)}
               name="min"
                 focusBorderColor="none"
@@ -236,7 +240,7 @@ function MyExercisePage() {
                 Calories:
               </Text>
               <Input
-              placeholder={`(${matchel.calories})`}
+              placeholder={matchel.calories?`(${matchel.calories})`:'0'}
               onChange={(e) => handleEdit(e)}
               name="calories"
                 focusBorderColor="none"

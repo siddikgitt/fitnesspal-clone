@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  Center,
-  Checkbox,
-  Flex,
-  Input,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Button, Center, Checkbox, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 const Signup8 = () => {
@@ -37,7 +28,14 @@ const Signup8 = () => {
 
               <Text textAlign={"center"}>Your daily net calorie goal is:</Text>
 
-              <Text fontWeight={"bold"} textAlign={"center"} mt={5} fontSize={35}>2,750</Text>
+              <Text
+                fontWeight={"bold"}
+                textAlign={"center"}
+                mt={5}
+                fontSize={35}
+              >
+                2,750
+              </Text>
               <Center>
                 <Button>calories</Button>
               </Center>
@@ -54,9 +52,9 @@ const Signup8 = () => {
               </Text>
 
               <Link to="/home">
-              <Button colorScheme="blue" marginBottom="2" w={"100%"}>
-                EXPLORE MYFITNESSPAL
-              </Button>
+                <Button colorScheme="blue" marginBottom="2" w={"100%"}>
+                  EXPLORE MYFITNESSPAL
+                </Button>
               </Link>
             </Box>
           </Center>

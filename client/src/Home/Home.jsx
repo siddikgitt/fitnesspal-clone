@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "./footer";
@@ -5,23 +6,20 @@ import Footer from "./footer";
 import StyleHome from "./home.module.css";
 
 export default function HomePage() {
-  //   const [hover,setHover]=useState(0)
   const [card, setCard] = useState(0);
   const navigate = useNavigate();
-
   const [login, setlogin] = useState(false);
   const userID = localStorage.getItem("fitUserID");
   useEffect(() => {
     if (userID) {
-      // console.log(userID);
       setlogin(true);
       navigate("/home");
     }
   }, [userID]);
   return (
-    <>
+    <Box border='1px solid red'>
       {/* GOOD HEALTH DIV START HERE */}
-      <div className={StyleHome.goodhealthdiv}>
+      <Box className={StyleHome.goodhealthdiv}>
         <div className={StyleHome.gooddiv2}>
           <h1 className={StyleHome.goodh1}>
             Good health starts with what you eat.
@@ -43,7 +41,7 @@ export default function HomePage() {
             alt="Food img"
           />
         </div>
-      </div>
+      </Box>
 
       {/* LOG FROM OVER START HERE */}
 
@@ -314,6 +312,6 @@ export default function HomePage() {
       {/* Footer */}
 
       <Footer />
-    </>
+    </Box>
   );
 }
