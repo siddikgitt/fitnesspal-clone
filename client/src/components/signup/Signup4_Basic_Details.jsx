@@ -248,6 +248,8 @@ const Signup4 = () => {
     "Zambia",
     "Zimbabwe",
   ];
+
+  // 3rd signup detail page for some more details
   return (
     <>
       <Center height={"100vh"}>
@@ -310,7 +312,6 @@ const Signup4 = () => {
                 onChange={(e) =>
                   setSignup({ ...signup, country: e.target.value })
                 }
-                // onChange={changeHandler}
                 name="country"
               >
                 {countryList.map((el) => (

@@ -32,7 +32,7 @@ const Signup5 = () => {
       });
     }
   };
-
+  // get users height and weight details
   return (
     <div>
       <Center height={"100vh"}>
