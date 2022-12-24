@@ -58,7 +58,7 @@ const Goals = () => {
           {/* Calories by Meal  */}
           <Flex mb={2} mt={7} justifyContent={"space-between"}>
             <Text fontWeight={"bold"} fontSize={18}>
-            Calories by Meal
+              Calories by Meal
             </Text>
             <Text fontWeight={"bold"} fontSize={18} color="blue">
               EDIT
@@ -75,7 +75,7 @@ const Goals = () => {
           ))}
 
           {/* Fitness */}
-          
+
           <Flex mb={2} mt={7} justifyContent={"space-between"}>
             <Text fontWeight={"bold"} fontSize={18}>
               Fitness
@@ -93,8 +93,6 @@ const Goals = () => {
               </Flex>
             </Box>
           ))}
-
-          
         </Box>
       </Center>
     </div>

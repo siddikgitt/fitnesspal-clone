@@ -18,18 +18,13 @@ import { AiFillStop } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { ExerciseContext } from "../../Context/ExerciseContext";
 import { DeleteExercise, getExerciseDairy } from "../../api";
-// import "../../pages/ExercisePage/exercise.css"
+
 
 function CardioVasular({currdate,setcurrdate}) {
   const {Exercisedata,setExercisedata}=useContext(ExerciseContext)
-  // console.log(Exercisedata,"cardio")
-  
-
-
 
  async function handleGetExercise(){
   let response=await getExerciseDairy(currdate);
-  // console.log(response,currdate,"resp")
   setExercisedata(response.data.message[0])
   }
  async function handleDelete(id,date){
@@ -38,22 +33,19 @@ function CardioVasular({currdate,setcurrdate}) {
   }
   useEffect(()=>{
     handleGetExercise()
-
   },[])
 
   return (
-    <Box
-    // border="1px solid red"
-    >
+    <Box>
       <TableContainer>
         <Table variant="simple">
           <TableCaption textAlign="start" borderBottom="1px solid lightgrey" >
             <Flex gap="1" >
-            <Link to="/exercise/add_to_diary">
+            <Link to="/exercise/myexercise">
               <Text fontSize="15px" 
               fontWeight='bold'
               color="#0072BF">
-                Add Text
+                Add Task
               </Text>
               </Link>
               <Text fontSize="13px" color="#0072BF">

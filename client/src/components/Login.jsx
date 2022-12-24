@@ -13,7 +13,7 @@ const Login = () => {
   const onLogin = async () => {
     const data = { email: email, password: password };
 
-    try{
+    try {
       const res = await axios.post(
         "https://fierce-hen-pajamas.cyclic.app/login",
         data
@@ -21,16 +21,16 @@ const Login = () => {
       console.log(res.data);
       if (res.data.message != "Invalid Credentials") {
         localStorage.setItem("fitUserID", res.data.message.data.id);
-        let user=JSON.parse(localStorage.getItem('user'))
+        let user = JSON.parse(localStorage.getItem("user"));
         toast({
           title: "Logged In successfully",
-          description:`Hey Welcome ${" "}  ${user.username}`,
+          description: `Hey Welcome ${" "}  ${user.username}`,
           status: "success",
           duration: 2000,
           position: "top",
           isClosable: true,
         });
-  
+
         navigate("/home");
       } else {
         toast({
@@ -40,10 +40,9 @@ const Login = () => {
           duration: 2000,
           position: "top",
           isClosable: true,
-        })
+        });
       }
-
-    }catch(err){
+    } catch (err) {
       toast({
         title: "Something went wrong",
         description: "please try again",
@@ -51,10 +50,8 @@ const Login = () => {
         duration: 2000,
         position: "top",
         isClosable: true,
-      })
-
+      });
     }
-  
   };
   useEffect(() => {
     toast({

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import StyleHome from "./home.module.css"
+import StyleHome from "./home.module.css";
 
 const BeforeNavbar = () => {
   return (

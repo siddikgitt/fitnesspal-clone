@@ -28,7 +28,6 @@ const Signup3 = () => {
       });
     }
     signupHandler({ key: "daily_activity", data: value });
-  
   };
 
   return (
@@ -57,7 +56,7 @@ const Signup3 = () => {
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
                   border={
-                    value == "Not very Active"
+                    value === "Not very Active"
                       ? "2px solid black"
                       : "1.5px solid gray"
                   }
@@ -78,7 +77,7 @@ const Signup3 = () => {
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
                   border={
-                    value == "Lightly Weight Active"
+                    value === "Lightly Weight Active"
                       ? "2px solid black"
                       : "1.5px solid gray"
                   }
@@ -99,7 +98,7 @@ const Signup3 = () => {
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
                   border={
-                    value == "Active" ? "2px solid black" : "1.5px solid gray"
+                    value === "Active" ? "2px solid black" : "1.5px solid gray"
                   }
                   w="100%"
                   textAlign={"center"}
@@ -118,7 +117,7 @@ const Signup3 = () => {
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
                   border={
-                    value == "Very Active"
+                    value === "Very Active"
                       ? "2px solid black"
                       : "1.5px solid gray"
                   }
@@ -151,7 +150,7 @@ const Signup3 = () => {
                   </Link>
                 </Box>
                 <Box w={"50%"}>
-                  <Link to={value?"/signup4":"/signup3"}>
+                  <Link to={value ? "/signup4" : "/signup3"}>
                     <Button
                       marginBottom="2"
                       colorScheme={"blue"}

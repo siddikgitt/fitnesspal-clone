@@ -15,53 +15,64 @@ function Database_calBurn() {
 
   return (
     <Flex
-      w={{lg:'80%',md:'80%',sm:'100%',base:'130%'}}
+      w={{ lg: "80%", md: "80%", sm: "100%", base: "130%" }}
       m=" 2rem auto"
       flexFlow="column"
       height="auto"
-      p={'1rem'}
-
+      p={"1rem"}
     >
       <Text fontSize="1.5rem " fontWeight="bold" color="#00548f">
         Calories Burned From Exercise
       </Text>
       <hr />
       {/* search */}
-      <HStack justifyContent={"space-between"} flexDir={{lg:'row',md:'row',sm:"column",base:"column"}}>
-        <Box w={{lg:'50%',md:'50%',sm:'80%',base:'100%'}} m='1rem 0'>
-          <Text color="#00548f" fontSize="17px" fontWeight="bold" m='0 0 0.5rem  0'>
+      <HStack
+        justifyContent={"space-between"}
+        flexDir={{ lg: "row", md: "row", sm: "column", base: "column" }}
+      >
+        <Box w={{ lg: "50%", md: "50%", sm: "80%", base: "100%" }} m="1rem 0">
+          <Text
+            color="#00548f"
+            fontSize="17px"
+            fontWeight="bold"
+            m="0 0 0.5rem  0"
+          >
             Search our exercise database by name:
           </Text>
           <HStack>
             <Input
               borderRadius="none"
               border={"1px solid black"}
-              boxShadow= "rgb(42, 43, 44) 1px 1px 2px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"
+              boxShadow="rgb(42, 43, 44) 1px 1px 2px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"
               placeholder="search"
               focusBorderColor="none"
               mr="0.3rem"
-              h='35px'
+              h="35px"
             />
-            <Button colorScheme="green" className="reportBtn"
-             h='35px'
-             padding={"0 1.5rem"}
+            <Button
+              colorScheme="green"
+              className="reportBtn"
+              h="35px"
+              padding={"0 1.5rem"}
             >
               Search
             </Button>
           </HStack>
         </Box>
         {/* secound search bar */}
-        <Box w={{lg:'50%',md:'50%',sm:'80%',base:'100%'}}>
-          <Text color="#00548f" fontSize="17px" fontWeight="bold"
-          m='0 0 0.5rem  0'
+        <Box w={{ lg: "50%", md: "50%", sm: "80%", base: "100%" }}>
+          <Text
+            color="#00548f"
+            fontSize="17px"
+            fontWeight="bold"
+            m="0 0 0.5rem  0"
           >
             ...or choose an exercise below:
           </Text>
           <Select
-           h='30px'
-           boxShadow= "rgb(42, 43, 44) 1px 1px 2px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"
-           borderRadius='2px'
-           
+            h="30px"
+            boxShadow="rgb(42, 43, 44) 1px 1px 2px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset"
+            borderRadius="2px"
             placeholder="Select option"
           >
             <option value="option1">Option 1</option>
@@ -122,7 +133,9 @@ function Database_calBurn() {
               {/* how long */}
 
               <HStack>
-                <Text fontSize={'12px'} fontWeight="semibold">Your Weight:</Text>
+                <Text fontSize={"12px"} fontWeight="semibold">
+                  Your Weight:
+                </Text>
                 <Input
                   focusBorderColor="none"
                   type="text"
@@ -147,9 +160,8 @@ function Database_calBurn() {
                 </Stack>
               </HStack>
 
-            
               <HStack>
-                <Text fontWeight="semibold" fontSize={'12px'}  >
+                <Text fontWeight="semibold" fontSize={"12px"}>
                   How long:
                 </Text>
                 <Input
@@ -166,7 +178,7 @@ function Database_calBurn() {
               </HStack>
 
               <Box>
-               <Text fontWeight={'bold'}>Calories burned: 0</Text>
+                <Text fontWeight={"bold"}>Calories burned: 0</Text>
               </Box>
             </Stack>
           </Stack>

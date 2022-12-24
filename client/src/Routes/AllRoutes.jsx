@@ -31,20 +31,21 @@ import Signup6 from "../components/signup/Signup6_CreateAccount";
 import Signup7 from "../components/signup/Signup7_UsernameForm";
 import Signup8 from "../components/signup/Signup8_calorieGoal";
 import { Box } from "@chakra-ui/react";
+import Footer from "../Home/footer";
 
 const AllRoutes = () => {
   const [login, setlogin] = useState(false);
   const navigate = useNavigate();
   const userID = localStorage.getItem("fitUserID");
   useEffect(() => {
-    if(userID){
-      navigate("/home")
+    if (userID) {
+      navigate("/home");
       setlogin(true);
     }
-  }, [userID])
+  }, [userID]);
   return (
-    <Box w={'100%'}>
-      {!login ? <BeforeNavbar/> : <Navbar2 />}
+    <Box w={"100%"}>
+      {!login ? <BeforeNavbar /> : <Navbar2 />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
@@ -68,7 +69,8 @@ const AllRoutes = () => {
 
         <Route
           path="/home/profile"
-   le       element={
+          le
+          element={
             <PrivateRoutes>
               <Profile />
             </PrivateRoutes>
@@ -106,7 +108,7 @@ const AllRoutes = () => {
           path="/food/dairy"
           element={
             <PrivateRoutes>
-              <FoodDiary/>
+              <FoodDiary />
             </PrivateRoutes>
           }
         />
@@ -193,6 +195,7 @@ const AllRoutes = () => {
           }
         />
       </Routes>
+      <Footer />
     </Box>
   );
 };

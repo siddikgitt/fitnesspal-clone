@@ -30,7 +30,6 @@ const Signup2 = () => {
     signupHandler({ key: "currweight", data: value });
   };
 
-
   return (
     <div>
       <Center height={"100vh"}>
@@ -57,7 +56,7 @@ const Signup2 = () => {
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
                   border={
-                    value == "Lose Weight"
+                    value === "Lose Weight"
                       ? "2px solid black"
                       : "1.2px solid gray"
                   }
@@ -75,7 +74,7 @@ const Signup2 = () => {
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
                   border={
-                    value == "Maintain Weight"
+                    value === "Maintain Weight"
                       ? "2px solid black"
                       : "1.2px solid gray"
                   }
@@ -93,7 +92,7 @@ const Signup2 = () => {
                   _hover={{ border: "1.5px solid black" }}
                   borderRadius={7}
                   border={
-                    value == "Gain Weight"
+                    value === "Gain Weight"
                       ? "2px solid black"
                       : "1.2px solid gray"
                   }

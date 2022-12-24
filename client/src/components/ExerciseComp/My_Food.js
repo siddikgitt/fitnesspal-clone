@@ -9,7 +9,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React from "react";
 
 function My_Food() {
   const data = new Array(10).fill(0);
@@ -38,7 +38,6 @@ function My_Food() {
       <HStack
         justifyContent={"space-between"}
         h="400px"
-        //   border ='1px solid green'
         alignItems=""
         mt="0.5rem"
       >
