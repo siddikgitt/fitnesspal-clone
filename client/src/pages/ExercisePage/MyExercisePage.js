@@ -22,8 +22,7 @@ let init = {
 function MyExercisePage() {
   const [matchel, setmatchel] = useState({});
   const [edit, setEdit] = useState(matchel);
-  console.log(matchel);
-
+ 
   function handleEdit(e) {
     const { name, value } = e.target;
     setEdit({
@@ -37,36 +36,41 @@ function MyExercisePage() {
   }
 
   return (
-    <Flex w={{lg:"70%",md:'80%',sm:'95%',base:'100%'}} justifyContent={"center"} m="5rem auto" flexFlow="column" 
-    pl={{lg:0,md:0,sm:"2rem",base:"2rem"}}
+    <Flex
+      w={{ lg: "70%", md: "80%", sm: "95%", base: "100%" }}
+      justifyContent={"center"}
+      m="5rem auto"
+      flexFlow="column"
+      pl={{ lg: 0, md: 0, sm: "2rem", base: "2rem" }}
     >
-      <HStack mb={"0.3rem"} justifyContent={"space-between"}   >
+      <HStack mb={"0.3rem"} justifyContent={"space-between"}>
         <Text fontSize="1.3rem " fontWeight="bold" color="#00548f">
           Your Personal Exercises
         </Text>
         <Box>
           <Link to={"/exercise/create-exercise"}>
-          <Button
-            colorScheme="green"
-            className="reportBtn"
-            fontSize={"13px"}
-            h="30px"
-            padding={"0 0.7rem"}
-          >
-            Create Exercise
-          </Button>
+            <Button
+              colorScheme="green"
+              className="reportBtn"
+              fontSize={"13px"}
+              h="30px"
+              padding={"0 0.7rem"}
+            >
+              Create Exercise
+            </Button>
           </Link>
         </Box>
       </HStack>
       <hr />
 
       {/* TExt */}
-      <HStack justifyContent={"space-between"} alignItems="" mt="0.5rem" 
-      flexDir={{lg:'row',md:'row',sm:'column',base:'column'}}
+      <HStack
+        justifyContent={"space-between"}
+        alignItems=""
+        mt="0.5rem"
+        flexDir={{ lg: "row", md: "row", sm: "column", base: "column" }}
       >
-        <Box
-          w={{lg:"50%",md:"50%",sm:"90%",base:'90%'}}
-        >
+        <Box w={{ lg: "50%", md: "50%", sm: "90%", base: "90%" }}>
           <Text w="100%" color={"black"} fontSize={"13px"} fontWeight="bold">
             To edit or delete a personal exercise, click on that exercise below.
             Use the search box to narrow your choices.
@@ -128,7 +132,12 @@ function MyExercisePage() {
                         {e.name}
                       </Text>
                     ))}
-                   <Text color="lightgrey">  {data.length?"":"Matched Exercises will be displayed here"}</Text>
+                    <Text color="lightgrey">
+                      {" "}
+                      {data.length
+                        ? ""
+                        : "Matched Exercises will be displayed here"}
+                    </Text>
                   </Box>
                 </Stack>
               </Box>
@@ -142,7 +151,7 @@ function MyExercisePage() {
           p="1rem"
           rowGap={"1rem"}
           bg="#f6f6f6"
-          w={{lg:"45%",md:"45%",sm:"90%",base:'90%'}}
+          w={{ lg: "45%", md: "45%", sm: "90%", base: "90%" }}
           borderBottom={"1px solid lightgrey"}
           h={"320px"}
         >
@@ -154,7 +163,7 @@ function MyExercisePage() {
               Name:
             </Text>
             <Input
-              placeholder={matchel.name?`(${matchel.name})`:"exercise name"}
+              placeholder={matchel.name ? `(${matchel.name})` : "exercise name"}
               onChange={(e) => handleEdit(e)}
               name="name"
               focusBorderColor="none"
@@ -165,7 +174,6 @@ function MyExercisePage() {
               borderTop="1px solid black"
               borderLeft="1px solid black"
               background="white"
-             
             />
           </HStack>
 
@@ -175,10 +183,9 @@ function MyExercisePage() {
             </Text>
 
             <Stack spacing={3}>
-              <Select 
-             
-              onChange={(e) => handleEdit(e)}
-              name="type"
+              <Select
+                onChange={(e) => handleEdit(e)}
+                name="type"
                 w="150px"
                 focusBorderColor="none"
                 bg="white"
@@ -199,8 +206,6 @@ function MyExercisePage() {
               Your Weight:
             </Text>
             <Input
-   
-            
               focusBorderColor="none"
               type="text"
               w="60px"
@@ -221,9 +226,9 @@ function MyExercisePage() {
                 Minutes:
               </Text>
               <Input
-              placeholder={matchel.min?`(${matchel.min})`:'0'}
-              onChange={(e) => handleEdit(e)}
-              name="min"
+                placeholder={matchel.min ? `(${matchel.min})` : "0"}
+                onChange={(e) => handleEdit(e)}
+                name="min"
                 focusBorderColor="none"
                 type="text"
                 w="60px"
@@ -232,7 +237,6 @@ function MyExercisePage() {
                 borderTop="1px solid black"
                 borderLeft="1px solid black"
                 background="white"
-               
               />
             </HStack>
             <HStack justifyContent={"center"}>
@@ -240,9 +244,9 @@ function MyExercisePage() {
                 Calories:
               </Text>
               <Input
-              placeholder={matchel.calories?`(${matchel.calories})`:'0'}
-              onChange={(e) => handleEdit(e)}
-              name="calories"
+                placeholder={matchel.calories ? `(${matchel.calories})` : "0"}
+                onChange={(e) => handleEdit(e)}
+                name="calories"
                 focusBorderColor="none"
                 type="text"
                 w="60px"
@@ -267,7 +271,7 @@ function MyExercisePage() {
               Save
             </Button>
             <Button
-            onClick={()=>console.log(Date.now())}
+              onClick={() => console.log(Date.now())}
               border="1px solid"
               className="reportBtn"
               fontSize={"13px"}
