@@ -32,26 +32,26 @@ The project has been completed within the duration of 5 days. Each of us had sha
 
 ## Glimpse and screenshots of our cloned website:
 **Landing Page**
-![App Screenshot](https://github.com/siddikgitt/accidental-marble-9532/blob/main/screenshots/landingPage.png)
+![App Screenshot](./screenshots/landingPage.png)
 
 **SignUp Page**
-![App Screenshot](https://github.com/siddikgitt/accidental-marble-9532/blob/main/screenshots/signup.png)
+![App Screenshot](./screenshots/signup.png)
 
 **Login Page**
-![App Screenshot](https://github.com/siddikgitt/accidental-marble-9532/blob/main/screenshots/login.png)
+![App Screenshot](./screenshots/login.png)
 
 **Home Page after login**
-![App Screenshot](https://github.com/siddikgitt/accidental-marble-9532/blob/main/screenshots/homeAfterLogin.png)
+![App Screenshot](./screenshots/homeAfterLogin.png)
 
 
 **Food Page**
-![App Screenshot](https://github.com/siddikgitt/accidental-marble-9532/blob/main/screenshots/food.png)
+![App Screenshot](./screenshots/food.png)
 
 **Add Food Page**
-![App Screenshot](https://github.com/siddikgitt/accidental-marble-9532/blob/main/screenshots/addFood.png)
+![App Screenshot](./screenshots/addFood.png)
 
 **Exercise Page**
-![App Screenshot](https://github.com/siddikgitt/accidental-marble-9532/blob/main/screenshots/exercise.png)
+![App Screenshot](./screenshots/exercise.png)
 
 
 
