@@ -31,6 +31,7 @@ import Signup6 from "../components/signup/Signup6_CreateAccount";
 import Signup7 from "../components/signup/Signup7_UsernameForm";
 import Signup8 from "../components/signup/Signup8_calorieGoal";
 import { Box } from "@chakra-ui/react";
+import Footer from "../Home/footer";
 
 const AllRoutes = () => {
   const [login, setlogin] = useState(false);
@@ -193,6 +194,7 @@ const AllRoutes = () => {
           }
         />
       </Routes>
+      <Footer/>
     </Box>
   );
 };

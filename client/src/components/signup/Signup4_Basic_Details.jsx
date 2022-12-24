@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import {
   Box,
   Button,
@@ -11,16 +11,12 @@ import {
   Stack,
   Text,
   useToast,
-  VStack,
+
 } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
 
-const init = {
-  country: "",
-  gender: "",
-  dob: "",
-};
+
 const Signup4 = () => {
   const { signup, setSignup } = useContext(AuthContext);
   const navigate = useNavigate();

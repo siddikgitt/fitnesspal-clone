@@ -17,7 +17,7 @@ export default function HomePage() {
     }
   }, [userID]);
   return (
-    <Box border='1px solid red'>
+    <Box>
       {/* GOOD HEALTH DIV START HERE */}
       <Box className={StyleHome.goodhealthdiv}>
         <div className={StyleHome.gooddiv2}>
@@ -308,10 +308,6 @@ export default function HomePage() {
         — it’s also the best calorie counter app for people who are looking to
         take back control of their health and fitness.
       </p>
-
-      {/* Footer */}
-
-      <Footer />
     </Box>
   );
 }
