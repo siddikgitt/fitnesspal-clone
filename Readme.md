@@ -32,7 +32,7 @@ The project has been completed within the duration of 5 days. Each of us had sha
 
 ## Glimpse and screenshots of our cloned website:
 **Landing Page**
-![App Screenshot](./screenshots/landingPage.png)
+![App Screenshot](landingPage.png)
 
 **SignUp Page**
 ![App Screenshot](./screenshots/signup.png)
