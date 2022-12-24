@@ -1,12 +1,9 @@
 import {
   Box,
   Button,
-  Container,
   Flex,
   HStack,
   Input,
-  Radio,
-  RadioGroup,
   Stack,
   Text,
 } from "@chakra-ui/react";
@@ -36,10 +33,8 @@ function AddFood() {
     let date = `${day}-${month}-${year}`;
     
     const userID = localStorage.getItem("fitUserID");
-
     const param = {date, time, userID, foodID}
     const res = await addFoodByName(param);
-    // console.log(res);
 
   };
 
@@ -73,7 +68,6 @@ function AddFood() {
 
           <Stack
             direction="row"
-            //  border="1px solid red"
             h="250px"
             m="1rem 0"
           >

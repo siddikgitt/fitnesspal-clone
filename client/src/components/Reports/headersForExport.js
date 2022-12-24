@@ -1,5 +1,6 @@
-export const headers=[
-    {
-      label:"Label",key:"key"
-    },
-  ]
+export const headers = [
+  {
+    label: "Label",
+    key: "key",
+  },
+];

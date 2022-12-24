@@ -29,7 +29,6 @@ function AuthContextProvider({ children }) {
     });
   };
 
-  
   return (
     <AuthContext.Provider value={{ signup, signupHandler, setSignup }}>
       {children}

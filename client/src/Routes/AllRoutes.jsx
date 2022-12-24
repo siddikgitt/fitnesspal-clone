@@ -38,14 +38,14 @@ const AllRoutes = () => {
   const navigate = useNavigate();
   const userID = localStorage.getItem("fitUserID");
   useEffect(() => {
-    if(userID){
-      navigate("/home")
+    if (userID) {
+      navigate("/home");
       setlogin(true);
     }
-  }, [userID])
+  }, [userID]);
   return (
-    <Box w={'100%'}>
-      {!login ? <BeforeNavbar/> : <Navbar2 />}
+    <Box w={"100%"}>
+      {!login ? <BeforeNavbar /> : <Navbar2 />}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<Login />} />
@@ -69,7 +69,8 @@ const AllRoutes = () => {
 
         <Route
           path="/home/profile"
-   le       element={
+          le
+          element={
             <PrivateRoutes>
               <Profile />
             </PrivateRoutes>
@@ -107,7 +108,7 @@ const AllRoutes = () => {
           path="/food/dairy"
           element={
             <PrivateRoutes>
-              <FoodDiary/>
+              <FoodDiary />
             </PrivateRoutes>
           }
         />
@@ -194,7 +195,7 @@ const AllRoutes = () => {
           }
         />
       </Routes>
-      <Footer/>
+      <Footer />
     </Box>
   );
 };

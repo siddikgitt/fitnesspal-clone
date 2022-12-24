@@ -14,7 +14,7 @@ import {
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { GrFacebook } from "react-icons/gr";
 import { AuthContext } from "../../Context/AuthContext";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Signup6 = () => {
   const { signup, setSignup } = useContext(AuthContext);
@@ -104,9 +104,9 @@ const Signup6 = () => {
                 marginBottom="2"
                 colorScheme={"blue"}
                 w={"100%"}
-                onClick={() =>{
-                  submitHandler()
-                  console.log(signup)
+                onClick={() => {
+                  submitHandler();
+                  console.log(signup);
                 }}
               >
                 CONTINUE

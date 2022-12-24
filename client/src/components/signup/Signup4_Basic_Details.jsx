@@ -11,11 +11,9 @@ import {
   Stack,
   Text,
   useToast,
-
 } from "@chakra-ui/react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/AuthContext";
-
 
 const Signup4 = () => {
   const { signup, setSignup } = useContext(AuthContext);

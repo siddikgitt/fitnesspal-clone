@@ -1,13 +1,13 @@
-import React from 'react';
-import FoodDiary from './FoodDiary';
-import './food.css';
+import React from "react";
+import FoodDiary from "./FoodDiary";
+import "./food.css";
 
 const Food = () => {
   return (
     <div>
-        <FoodDiary />
+      <FoodDiary />
     </div>
-  )
-}
+  );
+};
 
 export default Food;

@@ -28,7 +28,6 @@ const Signup3 = () => {
       });
     }
     signupHandler({ key: "daily_activity", data: value });
-  
   };
 
   return (
@@ -151,7 +150,7 @@ const Signup3 = () => {
                   </Link>
                 </Box>
                 <Box w={"50%"}>
-                  <Link to={value?"/signup4":"/signup3"}>
+                  <Link to={value ? "/signup4" : "/signup3"}>
                     <Button
                       marginBottom="2"
                       colorScheme={"blue"}

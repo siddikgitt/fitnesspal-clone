@@ -15,14 +15,14 @@ import { signupUser } from "../../api";
 const Signup7 = () => {
   const toast = useToast();
   const { signup, setSignup } = useContext(AuthContext);
-  const navigate =useNavigate()
+  const navigate = useNavigate();
   console.log(signup);
   const submitHandle = async () => {
     if (signup.username) {
       localStorage.setItem("user", JSON.stringify(signup));
 
       const user = await signupUser(signup)
-        .then((res) =>{
+        .then((res) => {
           toast({
             title: "Signup Successfull",
             description: "",
@@ -30,11 +30,9 @@ const Signup7 = () => {
             duration: 2000,
             position: "top",
             isClosable: true,
-          })
-          navigate('/signup8')
-          }
- 
-        )
+          });
+          navigate("/signup8");
+        })
         .catch((e) =>
           toast({
             title: "signup Failed",

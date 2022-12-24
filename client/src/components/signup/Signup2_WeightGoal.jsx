@@ -30,7 +30,6 @@ const Signup2 = () => {
     signupHandler({ key: "currweight", data: value });
   };
 
-
   return (
     <div>
       <Center height={"100vh"}>

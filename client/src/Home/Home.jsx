@@ -1,8 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Footer from "./footer";
-
 import StyleHome from "./home.module.css";
 
 export default function HomePage() {

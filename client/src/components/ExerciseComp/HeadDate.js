@@ -8,7 +8,7 @@ import {
   
   
   import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
-function HeadDate({currdate,setcurrdate}) {
+function HeadDate({setcurrdate}) {
     const timeElapsed = Date.now();
     const today = new Date(timeElapsed);
     let date = today.toDateString();
