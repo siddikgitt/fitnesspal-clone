@@ -14,7 +14,7 @@ The project has been completed within the duration of 5 days. Each of us had sha
 
 **Original website link**: https://www.myfitnesspal.com/
 
-**Link of our deployed project**: https://fitnesspal-clone-22h624abk-siddikgitt.vercel.app/home
+**Link of our deployed project**:https://myfitnesspal-delta.vercel.app
 
 **Link of our video presentation**: https://drive.google.com/drive/folders/1mN15YnVec4XUg22rny8Rg5y1403KiHw9?usp=sharing
 
@@ -36,23 +36,24 @@ The project has been completed within the duration of 5 days. Each of us had sha
 <!-- ![App Screenshot](landingPage.png) -->
 
 **SignUp Page**
-![App Screenshot](./screenshots/signup.png)
+<img src="https://i.ibb.co/MpfYR7v/signup.png" alt="signup" border="0">
+
 
 **Login Page**
-![App Screenshot](./screenshots/login.png)
+<img src="https://i.ibb.co/SBF9G6Z/login.png" alt="login" border="0">
 
 **Home Page after login**
-![App Screenshot](./screenshots/homeAfterLogin.png)
+<img src="https://i.ibb.co/1QLKgbp/home-After-Login.png" alt="home-After-Login" border="0">
 
 
 **Food Page**
-![App Screenshot](./screenshots/food.png)
+<img src="https://i.ibb.co/1GyVSRr/food.png" alt="food" border="0">
 
 **Add Food Page**
-![App Screenshot](./screenshots/addFood.png)
+<img src="https://i.ibb.co/xLYpxy3/addFood.png" alt="addFood" border="0">
 
 **Exercise Page**
-![App Screenshot](./screenshots/exercise.png)
+<img src="https://i.ibb.co/bd64Sgw/exercise.png" alt="exercise" border="0">
 
 
 
